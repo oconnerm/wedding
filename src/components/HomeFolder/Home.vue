@@ -1,5 +1,11 @@
 <template lang="html">
-  <h1>Hello world</h1>
+  <div>
+    <div class="row">
+      <div class="col-md-offset-3">
+          <img src="../../assets/clock.jpg">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
