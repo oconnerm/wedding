@@ -1,31 +1,20 @@
 <template>
-  <div class="hello">
+  <div class="main">
+    <a class="buttons" href="#home">HOME</a>
+    <a class="buttons" href="#about">ABOUT</a>
+    <a class="buttons" href="#location">LOCATION</a>
+    <a class="buttons" href="#rsvp">RSVP</a>
+    <a class="buttons" href="#register">REGISTER</a>
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'main',
   data () {
     return {
-      msg: "Hello welcome to Ryan and Becca's wedding page"
+      msg: "Hello welcome to Becca and Ryan's Wedding page!!!"
     }
   }
 }
@@ -49,5 +38,19 @@ li {
 
 a {
   color: #42b983;
+}
+
+.buttons {
+  border: none;
+  display: inline-block;
+  outline: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
 }
 </style>
