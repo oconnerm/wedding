@@ -1,6 +1,7 @@
 # wedding
 
 > Becca and Ryan's Wedding
+> Made by Ryan and Anu
 
 ## Build Setup
 
