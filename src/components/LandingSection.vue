@@ -1,10 +1,23 @@
 <template>
   <div class="main">
-    <a class="buttons" href="#home">HOME</a>
-    <a class="buttons" href="#about">ABOUT</a>
-    <a class="buttons" href="#location">LOCATION</a>
-    <a class="buttons" href="#rsvp">RSVP</a>
-    <a class="buttons" href="#register">REGISTER</a>
+    <router-link to="home">
+      <button type="button" name="button">HOME</button>
+    </router-link>
+    <router-link to="about">
+      <button type="button" name="button">ABOUT</button>
+    </router-link>
+    <router-link to="location">
+      <button type="button" name="button">LOCATION</button>
+    </router-link>
+    <router-link to="rsvp">
+      <button type="button" name="button">RSVP</button>
+    </router-link>
+    <router-link to="Register">
+      <button type="button" name="button">REGISTER</button>
+    </router-link>
+    <!--
+
+    <a class="buttons" href="#register">REGISTER</a> -->
     <h1>{{ msg }}</h1>
   </div>
 </template>
