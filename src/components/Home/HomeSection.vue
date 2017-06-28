@@ -1,9 +1,16 @@
 <template lang="html">
-  <h1>Home Placeholder</h1>
+  <div class="">
+    <h1>Home Placeholder</h1>
+    <picture></picture>
+  </div>
 </template>
 
 <script>
+import picture from './picture.vue'
 export default {
+  components: {
+    picture
+  }
 }
 </script>
 
