@@ -1,5 +1,5 @@
 <template lang="html">
-  <h1>RSVP placeholder</h1>
+  <h1>RSVP Placeholder</h1>
 </template>
 
 <script>
