@@ -6,6 +6,7 @@ import About from '@/components/About/AboutSection'
 import Locations from '@/components/Location/LocationSection'
 import Register from '@/components/Register/RegisterSection'
 import Rsvp from '@/components/RSVP/RsvpSection'
+import WeddingParty from '@/components/WeddingParty/WeddingPartySection'
 
 Vue.use(Router)
 
@@ -39,6 +40,11 @@ export default new Router({
       path: '/rsvp',
       name: 'RSVP',
       component: Rsvp
+    },
+    {
+      path: '/WeddingParty',
+      name: 'WeddingParty',
+      component: WeddingParty
     }
   ]
 })
