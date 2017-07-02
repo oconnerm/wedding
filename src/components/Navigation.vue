@@ -5,25 +5,39 @@
       <img class='heart' src='../assets/heart.svg'>
       <span>Becca </span>
     </div>
-    <div class="nav-div">
-      <div class="row">
-        <div class="col-md-2">
-          <router-link to="home">HOME</router-link>
-        </div>
-        <div class="col-md-2">
-          <router-link to="about">ABOUT</router-link>
-        </div>
-        <div class="col-md-2">
-          <router-link to="location">LOCATION</router-link>
-        </div>
-        <div class="col-md-2">
-          <router-link to="rsvp">RSVP</router-link>
-        </div>
-        <div class="col-md-2">
-          <router-link to="Register">REGISTER</router-link>
-        </div>
-        <div class="col-md-2">
-          <router-link to="WeddingParty">PARTY</router-link>
+    <div class="container-fluid">
+      <div class="nav-div">
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="link-container">
+              <router-link to="home">HOME</router-link>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="link-container">
+              <router-link to="about">ABOUT</router-link>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="link-container">
+                <router-link to="location">LOCATION</router-link>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="link-container">
+              <router-link to="rsvp">RSVP</router-link>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="link-container">
+              <router-link to="Register">REGISTER</router-link>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="link-container">
+              <router-link to="WeddingParty">PARTY</router-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -46,9 +60,11 @@ export default {
     margin: 30px;
   }
   .nav-div{
-    width: 800px;
     margin: auto;
     font-size: 15px;
     padding: 25px;
+    align-items: center;
+    min-width: 600px;
   }
+
 </style>
