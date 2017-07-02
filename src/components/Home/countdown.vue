@@ -1,25 +1,26 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-sm-3">
         <div class="block">
           <p class="digit">{{ days | two_digits }}</p>
           <p class="text">Days</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-sm-3">
         <div class="block">
           <p class="digit">{{ hours | two_digits }}</p>
           <p class="text">Hours</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-sm-3">
         <div class="block">
           <p class="digit">{{ minutes | two_digits }}</p>
           <p class="text">Minutes</p>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-sm-3">
+        <div class="block">
           <p class="digit">{{ seconds | two_digits }}</p>
           <p class="text">Seconds</p>
         </div>
