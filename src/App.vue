@@ -11,6 +11,7 @@
 
 <script>
 import Landing from './components/LandingSection.vue'
+
 export default {
   name: 'app',
   components: {
