@@ -1,10 +1,14 @@
 <template lang="html">
-  <submit></submit>
+  <div id="app" class="container">
+    <h1>Join Ryan and Becca!</h1>
+    <h2>Find your RSVP by typing in your Code:</h2>
+    <button @click.prevent="submit">Submit</button>
+    <input v-model="guestInput" placeholder="">
+  </div>
 </template>
 
 <script>
 
-<<<<<<< HEAD
 import Firebase from 'Firebase'
 
 let config = {
@@ -31,13 +35,6 @@ export default {
     return {
       guestInput: ''
     }
-=======
-import submit from './submit.vue'
-
-export default {
-  components: {
-    submit
->>>>>>> bdf81f454232e0f7311a0fda72ae7faa7c71f91c
   }
 
 }
