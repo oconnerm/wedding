@@ -1,10 +1,14 @@
 <template lang="html">
-  <submit></submit>
+  <div id="app" class="container">
+    <h1>Join Ryan and Becca!</h1>
+    <h2>Find your RSVP by typing in your Code:</h2>
+    <button @click.prevent="submit">Submit</button>
+    <input v-model="guestInput" placeholder="">
+  </div>
 </template>
 
 <script>
 
-<<<<<<< HEAD
 import Firebase from 'Firebase'
 
 let config = {
@@ -15,33 +19,28 @@ let config = {
   storageBucket: 'wedding-7f971.appspot.com',
   messagingSenderId: '117898341533'
 }
-
-Firebase.initializeApp(config)
+let app = Firebase.initializeApp(config)
+let db = app.database()
+let guestCode = db.ref('gues_code')
 
 export default {
   methods: {
     submit: function () {
       var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
       codeQuery.once('value').then(function (snapshot) {
-        alert('Name: ' + snapshot.val().name + '\nAttending: ' + snapshot.val().attending)
+        alert(snapshot.val())
       })
     }
+  },
+  firebase: {
+    guest: guestCode
   },
   data () {
     return {
       guestInput: ''
     }
-=======
-import submit from './submit.vue'
-
-export default {
-  components: {
-    submit
->>>>>>> bdf81f454232e0f7311a0fda72ae7faa7c71f91c
   }
-
 }
-
 </script>
 
 <style lang="css">
