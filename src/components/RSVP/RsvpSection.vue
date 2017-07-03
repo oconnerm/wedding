@@ -21,21 +21,16 @@ let config = {
   messagingSenderId: '117898341533'
 }
 
-let app = Firebase.initializeApp(config)
-let db = app.database()
-let guestCode = db.ref('gues_code')
+Firebase.initializeApp(config)
 
 export default {
   methods: {
     submit: function () {
       var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
       codeQuery.once('value').then(function (snapshot) {
-        alert(snapshot.val())
+        alert('Name: ' + snapshot.val().name + '\nAttending: ' + snapshot.val().attending)
       })
     }
-  },
-  firebase: {
-    guest: guestCode
   },
   data () {
     return {
