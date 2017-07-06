@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div id="app" class="container">
     <submit></submit>
   </div>
 </template>
@@ -12,7 +12,6 @@ export default {
   components: {
     submit
   }
-
 }
 
 </script>
