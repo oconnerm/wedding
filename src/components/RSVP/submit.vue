@@ -2,8 +2,8 @@
   <div id="app" class="container">
     <h1>Join Ryan and Becca!</h1>
     <h2>Find your RSVP by typing in your Code:</h2>
+    <input v-model="guestInput" placeholder="Your code">
     <button @click.prevent="submit">Submit</button>
-    <input v-model="guestInput" placeholder="">
   </div>
 </template>
 

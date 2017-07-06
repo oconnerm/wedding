@@ -1,5 +1,7 @@
 <template lang="html">
-  <submit></submit>
+  <div class="">
+    <submit></submit>
+  </div>
 </template>
 
 <script>

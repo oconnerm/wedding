@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home/HomeSection'
 import About from '@/components/About/AboutSection'
 import Locations from '@/components/Location/LocationSection'
-import Register from '@/components/Register/RegisterSection'
+import Registery from '@/components/Registery/RegisterySection'
 import Rsvp from '@/components/RSVP/RsvpSection'
 import WeddingParty from '@/components/WeddingParty/WeddingPartySection'
 
@@ -32,9 +32,9 @@ export default new Router({
       component: Locations
     },
     {
-      path: '/register',
-      name: 'Register',
-      component: Register
+      path: '/registery',
+      name: 'Registery',
+      component: Registery
     },
     {
       path: '/rsvp',

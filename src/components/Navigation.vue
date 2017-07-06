@@ -30,7 +30,7 @@
           </div>
           <div class="col-sm-2">
             <div class="link-container">
-              <router-link to="Register">REGISTER</router-link>
+              <router-link to="Register">REGISTERY</router-link>
             </div>
           </div>
           <div class="col-sm-2">
@@ -65,6 +65,8 @@ export default {
     padding: 25px;
     align-items: center;
     min-width: 600px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
   }
 
 </style>

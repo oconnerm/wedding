@@ -21,9 +21,5 @@ export default {
 </script>
 
 <style lang="css">
-  /*.mapContainer{
-    display: block;
-    min-width: 500px;
-    margin: auto;
-  }*/
+
 </style>
