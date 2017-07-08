@@ -32,6 +32,7 @@ export default {
     return {
       guestInput: '',
       submitted: false,
+      guestFood: {'food': ''},
       name: ''
     }
   },
@@ -46,13 +47,9 @@ export default {
       })
     },
     sendRsvp: function () {
-      var self = this
+      // var self = this
       var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
-      codeQuery.once('value').then(function (snapshot) {
-        // alert(snapshot.val().name)
-        self.name = snapshot.val().name
-        self.submitted = true
-      })
+      codeQuery.update({'food': this.guestFood})
     }
   }
 }
