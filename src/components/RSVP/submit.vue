@@ -4,6 +4,12 @@
     <h2>Find your RSVP by typing in your Code:</h2>
     <input v-model="guestInput" placeholder="Your code">
     <button @click.prevent="submit">Submit</button>
+    <h2 v-if="submitted">Name on your RSVP: {{name}}</h2>
+    <input type="radio" v-if="submitted" v-model="guestFood" id="steak" value="Steak">
+    <label v-if="submitted" for="steak">Steak</label>
+    <input type="radio" v-if="submitted" v-model="guestFood" id="chicken" value="Chicken">
+    <label v-if="submitted" for="chicken">Chicken</label>
+    <button v-if="submitted" @click.prevent="sendRsvp">Send RSVP</button>
   </div>
 </template>
 
@@ -19,25 +25,34 @@ let config = {
   storageBucket: 'wedding-7f971.appspot.com',
   messagingSenderId: '117898341533'
 }
-let app = Firebase.initializeApp(config)
-let db = app.database()
-let guestCode = db.ref('gues_code')
+Firebase.initializeApp(config)
 
 export default {
-  methods: {
-    submit: function () {
-      var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
-      codeQuery.once('value').then(function (snapshot) {
-        alert(snapshot.val())
-      })
-    }
-  },
-  firebase: {
-    guest: guestCode
-  },
   data () {
     return {
-      guestInput: ''
+      guestInput: '',
+      submitted: false,
+      name: ''
+    }
+  },
+  methods: {
+    submit: function () {
+      var self = this
+      var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
+      codeQuery.once('value').then(function (snapshot) {
+        // alert(snapshot.val().name)
+        self.name = snapshot.val().name
+        self.submitted = true
+      })
+    },
+    sendRsvp: function () {
+      var self = this
+      var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
+      codeQuery.once('value').then(function (snapshot) {
+        // alert(snapshot.val().name)
+        self.name = snapshot.val().name
+        self.submitted = true
+      })
     }
   }
 }
