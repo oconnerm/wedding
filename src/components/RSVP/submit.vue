@@ -4,28 +4,28 @@
     <h2>Find your RSVP by typing in your Code:</h2>
     <input v-model="guestInput" placeholder="Your code">
     <button @click.prevent="submit">Submit</button>
-    <h2 v-if="submitted">Name on your RSVP:</h2>
+    <h2 v-if="query">Name on your RSVP:</h2>
     <h3>{{one_name}}</h3>
     <h3 v-if="two_name">{{two_name}}</h3>
 
     <!-- Guest Number 1-->
-    <h3 v-if="submitted"> {{one_name}} is attending Ceremony?</h3>
-    <select v-if="submitted" v-model="one_ceremony">
+    <h3 v-if="query"> {{one_name}} is attending Ceremony?</h3>
+    <select v-if="query" v-model="one_ceremony">
       <option disabled value="">Please select one</option>
       <option>Yes</option>
       <option>No</option>
     </select>
-    <h3 v-if="submitted">{{one_name}} is attending Reception?</h3>
-    <select v-if="submitted" v-model="one_reception">
+    <h3 v-if="query">{{one_name}} is attending Reception?</h3>
+    <select v-if="query" v-model="one_reception">
       <option disabled value="">Please select one</option>
       <option>Yes</option>
       <option>No</option>
     </select>
     <br>
-    <input type="radio" v-if="submitted" v-model="one_guestFood" id="steak" value="Steak">
-    <label v-if="submitted" for="steak">Steak</label>
-    <input type="radio" v-if="submitted" v-model="one_guestFood" id="chicken" value="Chicken">
-    <label v-if="submitted" for="chicken">Chicken</label>
+    <input type="radio" v-if="query" v-model="one_guestFood" id="steak" value="Steak">
+    <label v-if="query" for="steak">Steak</label>
+    <input type="radio" v-if="query" v-model="one_guestFood" id="chicken" value="Chicken">
+    <label v-if="query" for="chicken">Chicken</label>
 
     <!-- Guest Number 2-->
     <h3 v-if="two_name"> {{two_name}} is attending Ceremony?</h3>
@@ -41,14 +41,14 @@
       <option>No</option>
     </select>
     <br>
-    <input type="radio" v-if="_2" v-model="two_guestFood" id="steak" value="Steak">
+    <input type="radio" v-if="two_name" v-model="two_guestFood" id="steak" value="Steak">
     <label v-if="two_name" for="steak">Steak</label>
     <input type="radio" v-if="two_name" v-model="two_guestFood" id="chicken" value="Chicken">
     <label v-if="two_name" for="chicken">Chicken</label>
 
-    <textarea v-if="submitted" v-model="comments" placeholder="Write us something cute!"></textarea>
+    <textarea v-if="query" v-model="comments" placeholder="Write us something cute!"></textarea>
 
-    <button v-if="submitted" @click.prevent="sendRsvp">Send RSVP</button>
+    <button v-if="query" @click.prevent="sendRsvp">Send RSVP</button>
 
   </div>
 </template>
@@ -71,7 +71,7 @@ export default {
   data () {
     return {
       guestInput: '',
-      submitted: false,
+      query: false,
       one_guestFood: '',
       one_ceremony: '',
       one_reception: '',
@@ -91,7 +91,7 @@ export default {
         // alert(snapshot.val().name)
         self.one_name = snapshot.val().one_name
         self.two_name = snapshot.val().two_name
-        self.submitted = true
+        self.query = true
       })
     },
     sendRsvp: function () {
