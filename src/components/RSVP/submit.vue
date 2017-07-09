@@ -98,7 +98,9 @@ export default {
       // var self = this
       var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
       codeQuery.update({'one_food': this.one_guestFood, 'one_attending_ceremony': this.one_reception, 'one_attending_reception': this.one_ceremony})
-      codeQuery.update({'two_food': this.two_guestFood, 'two_attending_ceremony': this.two_reception, 'two_attending_reception': this.two_ceremony})
+      if (this.two_name) {
+        codeQuery.update({'two_food': this.two_guestFood, 'two_attending_ceremony': this.two_reception, 'two_attending_reception': this.two_ceremony})
+      }
       codeQuery.update({'comments': this.comments})
     }
   }
