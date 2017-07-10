@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="col-sm-2">
-            <div class="link-container">
+            <div id='party' class="link-container">
               <router-link to="WeddingParty">PARTY</router-link>
             </div>
           </div>
@@ -64,9 +64,16 @@ export default {
     font-size: 15px;
     padding: 25px;
     align-items: center;
-    min-width: 600px;
     font-family: 'Inconsolata', monospace;
     font-size: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    .link-container{
+      font-size: 16px;
+    }
+    #party{
+      padding-left: 10px;
+    }
   }
 
 </style>
