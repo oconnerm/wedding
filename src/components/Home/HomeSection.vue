@@ -4,7 +4,7 @@
       <picture></picture>
     </div>
     <div class="box">
-      <countdown date="2018-6-28 00:00:00"></countdown>
+      <countdown date="2018-8-10 18:00:00"></countdown>
     </div>
   </div>
 </template>

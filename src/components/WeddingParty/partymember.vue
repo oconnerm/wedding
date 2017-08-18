@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="">
     <h1>Best Men:</h1>
     <h4>Kyle O'Connell</h4>
     <h4>Anu Shrestha</h4>

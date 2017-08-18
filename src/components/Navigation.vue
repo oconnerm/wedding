@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="header">
-      <span>Ryan </span>
-      <img class='heart' src='../assets/heart.svg'>
       <span>Becca </span>
+      <img class='heart' src='../assets/heart.svg'>
+      <span>Ryan </span>
     </div>
     <div class="container-fluid">
       <div class="nav-div">
