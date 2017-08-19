@@ -5,7 +5,7 @@ import Wedding from '@/components/Wedding/WeddingSection'
 import Registery from '@/components/Registery/RegisterySection'
 import Rsvp from '@/components/RSVP/RsvpSection'
 import Party from '@/components/Party/PartySection'
-import Travel from '@/components/Travel/TravelSection'
+import Photos from '@/components/Photos/PhotoSection'
 
 Vue.use(Router)
 
@@ -41,9 +41,9 @@ export default new Router({
       component: Wedding
     },
     {
-      path: '/travel',
-      name: 'Travel',
-      component: Travel
+      path: '/photos',
+      name: 'Photos',
+      component: Photos
     }
   ]
 })
