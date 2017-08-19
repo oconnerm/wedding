@@ -15,17 +15,17 @@
           </div>
           <div class="col-sm-2">
             <div class="link-container">
-              <router-link to="about">ABOUT</router-link>
+              <router-link to="wedding">WEDDING</router-link>
             </div>
           </div>
           <div class="col-sm-2">
-            <div class="link-container">
-                <router-link to="location">LOCATION</router-link>
+            <div id='party' class="link-container">
+              <router-link to="Travel">TRAVEL</router-link>
             </div>
           </div>
           <div class="col-sm-2">
-            <div class="link-container">
-              <router-link to="rsvp">RSVP</router-link>
+            <div id='party' class="link-container">
+              <router-link to="Party">PARTY</router-link>
             </div>
           </div>
           <div class="col-sm-2">
@@ -34,8 +34,8 @@
             </div>
           </div>
           <div class="col-sm-2">
-            <div id='party' class="link-container">
-              <router-link to="WeddingParty">PARTY</router-link>
+            <div class="link-container">
+              <router-link to="rsvp">RSVP</router-link>
             </div>
           </div>
         </div>
