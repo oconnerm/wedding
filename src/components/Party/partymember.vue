@@ -1,5 +1,14 @@
 <template lang="html">
   <div class="">
+    <h1>Maids of Honor:</h1>
+    <h4>Rachel Aragon</h4>
+    <h4>Ramona Aragon</h4>
+    <h1>Bridesmaids:</h1>
+    <h4>Matt Aragon</h4>
+    <h4>Stephanie Aragon</h4>
+    <h4>Dana Miller</h4>
+    <h4>Brittany Sheehan</h4>
+    <h4>Ryan Thomas</h4>
     <h1>Best Men:</h1>
     <h4>Kyle O'Connell</h4>
     <h4>Anu Shrestha</h4>
