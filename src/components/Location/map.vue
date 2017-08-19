@@ -21,11 +21,11 @@ Vue.use(VueGoogleMaps, {
 export default {
   data () {
     return {
-      center: {lat: 39.747586, lng: -105.018829},
+      center: {lat: 39.7063, lng: -105.2884},
       markers: [{
-        position: {lat: 39.747586, lng: -105.018829}
+        position: {lat: 39.7063, lng: -105.2884}
       }, {
-        position: {lat: 39.747586, lng: -105.018829}
+        position: {lat: 39.7063, lng: -105.2884}
       }]
     }
   }

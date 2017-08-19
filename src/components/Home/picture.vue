@@ -10,6 +10,6 @@ export default {
 
 <style scoped lang="css">
  .pic{
-   height: 450px;
+   height: 400px;
  }
 </style>

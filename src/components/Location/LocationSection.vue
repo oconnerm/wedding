@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="container-fluid">
-    <h1>Location Placeholder</h1>
+    <h1>The Pines at Genesee</h1>
     <div class="row">
       <div class="col-lg-12">
         <div class="mapContainer">
