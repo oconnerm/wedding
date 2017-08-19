@@ -20,7 +20,7 @@
           </div>
           <div class="col-sm-2">
             <div id='party' class="link-container">
-              <router-link to="Travel">TRAVEL</router-link>
+              <router-link to="Travel">PHOTO</router-link>
             </div>
           </div>
           <div class="col-sm-2">
