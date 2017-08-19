@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class='description'>
       <h2>The wedding will be held on Friday, August 10, 2018. We'll start at the Evergreen Wedding Terrace for the ceremony, then move to the ballroom for the reception.</h2>
       <h3>Ceremoney 5:00 - 6:00</h3>
       <h3>Reception 7:00 - 12:00</h3>
@@ -27,6 +27,9 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+  .description{
+    font-size: 20px;
+  }
 
 </style>

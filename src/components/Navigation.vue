@@ -30,7 +30,7 @@
           </div>
           <div class="col-sm-2">
             <div class="link-container">
-              <router-link to="Register">REGISTERY</router-link>
+              <router-link to="registery">REGISTERY</router-link>
             </div>
           </div>
           <div class="col-sm-2">
