@@ -4,6 +4,7 @@
         <div class="col-md-12 main">
           <landing></landing>
           <router-view></router-view>
+          <Footer></Footer>
         </div>
       </div>
   </div>
@@ -11,11 +12,12 @@
 
 <script>
 import Landing from './components/LandingSection.vue'
-
+import Footer from './components/FooterSection.vue'
 export default {
   name: 'app',
   components: {
-    Landing
+    Landing,
+    Footer
   }
 }
 </script>
