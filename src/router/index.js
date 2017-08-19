@@ -6,6 +6,7 @@ import Registery from '@/components/Registery/RegisterySection'
 import Rsvp from '@/components/RSVP/RsvpSection'
 import Party from '@/components/Party/PartySection'
 import Photos from '@/components/Photos/PhotoSection'
+import GuestList from '@/components/GuestList/GuestListSection'
 
 Vue.use(Router)
 
@@ -44,6 +45,11 @@ export default new Router({
       path: '/photos',
       name: 'Photos',
       component: Photos
+    },
+    {
+      path: '/guestlist',
+      name: 'GuestList',
+      component: GuestList
     }
   ]
 })

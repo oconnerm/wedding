@@ -1,9 +1,18 @@
 <template lang="html">
-  <h1>Registery Placeholder</h1>
+  <div id="app" class="container">
+    <picture></picture>
+    <h1>Registery Placeholder</h1>
+  </div>
 </template>
 
 <script>
+
+import picture from './picture.vue'
+
 export default {
+  components: {
+    picture
+  }
 }
 </script>
 
