@@ -3,6 +3,7 @@
     <gmap-map class="g-map" :center="center" :zoom="15">
         <gmap-marker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position"></gmap-marker>
       </gmap-map>
+      <hr>
   </div>
 </template>
 

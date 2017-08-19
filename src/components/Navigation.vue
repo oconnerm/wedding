@@ -57,7 +57,6 @@ export default {
   .header {
     font-size: 30px;
     font-family: 'Inconsolata', monospace;
-    margin: 30px;
   }
   .nav-div{
     margin: auto;
