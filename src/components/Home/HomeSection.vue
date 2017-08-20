@@ -2,14 +2,19 @@
   <div class="container">
     <div class="box">
       <picture></picture>
-    </div>
+      <hr>
+      <br>
       <h4>Come celebrate our wedding!</h4>
+      <h5>Friday, August 10, 2018</h5>
+      <br>
+      <hr>
+      <br>
       <h3>Rabecca Aragon</h3>
-      <h2>&</h2>
+      <h1>&</h1>
       <h3>Ryan O'Connell</h3>
-      <h4>Friday, August 10, 2018</h4>
-      <h3>Becca and Ryan would like to invite you to celebrate their marriage.</h3>
-    <div class="box">
+      <br>
+      <hr>
+      <br>
       <countdown date="2018-8-10 18:00:00"></countdown>
     </div>
   </div>
