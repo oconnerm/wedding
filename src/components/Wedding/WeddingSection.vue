@@ -2,6 +2,8 @@
   <div class="container-fluid">
     <h1>The Pines at Genesee</h1>
     <p>633 Park Point Dr, Golden, CO 80401</p>
+    <br>
+    <b-button class="button" href="http://thepinesatgenesee.com/" target="_blank" variant="primary">Visit Site</b-button>
     <hr>
     <br>
     <app-map></app-map>

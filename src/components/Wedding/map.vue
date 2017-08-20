@@ -1,7 +1,7 @@
-<template lang="html">
-  <div class="mapContainer">
-    <gmap-map class="g-map" :center="center" :zoom="15">
-        <gmap-marker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position"></gmap-marker>
+<template lang='html'>
+  <div class='mapContainer'>
+    <gmap-map class='g-map' :center='center' :zoom='15'>
+        <gmap-marker :key='index' v-for='(m, index) in markers' :position='m.position' :clickable='true' :draggable='true' @click='center=m.position'></gmap-marker>
       </gmap-map>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang='css' scoped>
   .g-map{
     width: 500px;
     height: 300px;

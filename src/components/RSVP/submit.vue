@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="app" class="container">
-    <h1>Join Ryan and Becca!</h1>
+    <h1>Join Becca and Ryan!</h1>
 
     <b-btn v-b-modal.modal1>Find your reservation</b-btn>
     <b-modal :hideFooter='true' ref="my_modal" id="modal1" title="Submit your code" @next="sendRsvp">

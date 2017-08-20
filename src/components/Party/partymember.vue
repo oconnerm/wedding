@@ -1,24 +1,27 @@
 <template lang="html">
   <div class="">
-    <h1>Maids of Honor:</h1>
-    <h4>Rachel Aragon</h4>
-    <h4>Ramona Aragon</h4>
-    <h1>Bridesmaids:</h1>
-    <h4>Matt Aragon</h4>
-    <h4>Stephanie Aragon</h4>
-    <h4>Dana Miller</h4>
-    <h4>Brittany Sheehan</h4>
-    <h4>Ryan Thomas</h4>
-    <h1>Best Men:</h1>
-    <h4>Kyle O'Connell</h4>
-    <h4>Anu Shrestha</h4>
-    <h1>Groomsmen:</h1>
-    <h4>Steve Aragon</h4>
-    <h4>Michael Christman</h4>
-    <h4>Kyle Henson</h4>
-    <h4>DJ Molinare</h4>
-    <h4>David Morris</h4>
-    <h4>Eric Ramon</h4>
+    <hr>
+    <h3>Maids of Honor:</h3>
+    <p>Rachel Aragon</p>
+    <p>Ramona Aragon</p>
+    <h3>Bridesmaids:</h3>
+    <p>Matt Aragon</p>
+    <p>Stephanie Aragon</p>
+    <p>Dana Miller</p>
+    <p>Brittany Sheehan</p>
+    <p>Ryan Thomas</p>
+    <hr>
+    <h3>Best Men:</h3>
+    <p>Kyle O'Connell</p>
+    <p>Anu Shrestha</p>
+    <h3>Groomsmen:</h3>
+    <p>Steve Aragon</p>
+    <p>Michael Christman</p>
+    <p>Kyle Henson</p>
+    <p>DJ Molinare</p>
+    <p>David Morris</p>
+    <p>Eric Ramon</p>
+    <hr>
   </div>
 </template>
 
