@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="app" class="container">
+  <div >
     <!-- <h3>Engagement Pictures</h3> -->
     <picture></picture>
   </div>
@@ -18,4 +18,12 @@ export default {
 </script>
 
 <style lang="css">
+/*@media only screen and (max-width: 768px) {
+    .pic{
+      border-radius: 300px;
+      height: 10px;
+      margin: 5px;
+      max-width: 103px;
+    }
+}*/
 </style>
