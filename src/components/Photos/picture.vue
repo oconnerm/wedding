@@ -54,14 +54,7 @@ export default {
 </script>
 
 <style scoped lang="css">
-@media only screen and (max-width: 1024px) {
-    .pic{
-      /*border-radius: 300px;*/
-      height: 250px;
-      margin: 5px;
-      max-width: 300px;
-    }
-}
+
 .pic{
   height: 350px;
   margin: 5px;
