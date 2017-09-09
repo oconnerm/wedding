@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home/HomeSection'
 import Wedding from '@/components/Wedding/WeddingSection'
-import Registery from '@/components/Registery/RegisterySection'
+import Registry from '@/components/Registry/RegistrySection'
 import Rsvp from '@/components/RSVP/RsvpSection'
 import Party from '@/components/Party/PartySection'
 import Photos from '@/components/Photos/PhotoSection'
@@ -14,7 +14,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/saveDate'
     },
     {
       path: '/home',
@@ -22,9 +22,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/registery',
-      name: 'Registery',
-      component: Registery
+      path: '/registry',
+      name: 'Registry',
+      component: Registry
     },
     {
       path: '/rsvp',
@@ -50,6 +50,11 @@ export default new Router({
       path: '/guestlist',
       name: 'GuestList',
       component: GuestList
+    },
+    {
+      path: '/saveDate',
+      name: 'saveDate',
+      component: Home
     }
   ]
 })

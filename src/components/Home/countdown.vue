@@ -3,26 +3,26 @@
     <div class="row">
       <div class="col-sm-3">
         <div class="block">
-          <p class="digit">{{ days | two_digits }}</p>
           <p class="text">Days</p>
+          <p class="digit">{{ days | two_digits }}</p>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="block">
-          <p class="digit">{{ hours | two_digits }}</p>
           <p class="text">Hours</p>
+          <p class="digit">{{ hours | two_digits }}</p>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="block">
-          <p class="digit">{{ minutes | two_digits }}</p>
           <p class="text">Minutes</p>
+          <p class="digit">{{ minutes | two_digits }}</p>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="block">
-          <p class="digit">{{ seconds | two_digits }}</p>
           <p class="text">Seconds</p>
+          <p class="digit">{{ seconds | two_digits }}</p>
         </div>
       </div>
     </div>
@@ -84,12 +84,15 @@ export default {
   margin: 20px;
 }
 .text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oregano', cursive;
+  color: #5f1e1a;
+  font-size: 30px;
   text-align: center;
 }
 .digit {
   margin: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-family: 'Oregano', cursive;
   text-align: center;
 }
 </style>

@@ -26,12 +26,4 @@ export default {
 .main {
   text-align: center;
 }
-
-body {
-  background-image: url("./assets/bg1.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 </style>

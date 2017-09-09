@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app" class="container">
     <picture></picture>
-    <h1>Registery Placeholder</h1>
+    <h1>Registry Placeholder</h1>
   </div>
 </template>
 
