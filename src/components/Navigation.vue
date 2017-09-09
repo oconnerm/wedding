@@ -2,15 +2,15 @@
   <div>
     <div class="header">
       <span>Becca </span>
-      <img class='heart' src='../assets/heart.svg'>
+      <img class='heart' src='../assets/heart.png'>
       <span>Ryan </span>
     </div>
     <div class="container-fluid">
-      <div class="nav-div">
+      <div v-if="isNotSaveDatePage" class="nav-div">
         <div class="row">
           <div class="col-sm-2">
             <div class="link-container">
-              <router-link to="home">HOME</router-link>
+              <router-link to="home test">HOME</router-link>
             </div>
           </div>
           <div class="col-sm-2">
@@ -30,7 +30,7 @@
           </div>
           <div class="col-sm-2">
             <div class="link-container">
-              <router-link to="registery">REGISTERY</router-link>
+              <router-link to="registry">REGISTRY</router-link>
             </div>
           </div>
           <div class="col-sm-2">
@@ -46,17 +46,25 @@
 
 <script>
 export default {
-
+  computed: {
+    isNotSaveDatePage () {
+      return this.$route.name !== 'saveDate'
+    }
+  }
 }
 </script>
 
 <style lang="css" scoped>
   .heart{
-    width: 50px;
+    width: 70px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .header {
-    font-size: 30px;
-    font-family: 'Inconsolata', monospace;
+    font-size: 65px;
+    font-family: 'Oregano', cursive;
+    /*red*/
+    color: #5f1e1a;
   }
   .nav-div{
     margin: auto;
