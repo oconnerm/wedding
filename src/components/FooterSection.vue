@@ -1,5 +1,5 @@
 <template lang="html">
-<div class="footer">
+<div class="copyRight">
   <p>&copy; Anu and Ryan 2017</p>
 </div>
 </template>
@@ -8,7 +8,7 @@
 </script>
 
 <style lang="css">
-  .footer{
+  .copyRight{
     margin-top: 30px;
     color: #999999;
   }

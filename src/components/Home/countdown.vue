@@ -40,31 +40,23 @@ Vue.filter('two_digits', function (value) {
 })
 
 export default {
-  props: {
-    date: null
-  },
   data () {
     return {
-      now: Math.trunc((new Date()).getTime() / 1000),
-      event: this.date
+      now: Math.trunc((new Date()).getTime() / 1000)
     }
   },
   computed: {
-    calculatedDate () {
-      this.event = Math.trunc(Date.parse(this.event) / 1000)
-      return this.event
-    },
     seconds () {
-      return (this.calculatedDate - this.now) % 60
+      return (1533945600 - this.now) % 60
     },
     minutes () {
-      return Math.trunc((this.calculatedDate - this.now) / 60) % 60
+      return Math.trunc((1533945600 - this.now) / 60) % 60
     },
     hours () {
-      return Math.trunc((this.calculatedDate - this.now) / 60 / 60) % 24
+      return Math.trunc((1533945600 - this.now) / 60 / 60) % 24
     },
     days () {
-      return Math.trunc((this.calculatedDate - this.now) / 60 / 60 / 24)
+      return Math.trunc((1533945600 - this.now) / 60 / 60 / 24)
     }
   },
   mounted () {
