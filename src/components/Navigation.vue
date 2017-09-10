@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-sm-2">
             <div class="link-container">
-              <router-link to="home test">HOME</router-link>
+              <router-link to="home">HOME</router-link>
             </div>
           </div>
           <div class="col-sm-2">
