@@ -19,7 +19,7 @@
         <h3>&</h3>
         <h3>Ryan O'Connell</h3>
       </div>
-      <countdown date="2018-8-10 18:00:00"></countdown>
+      <countdown></countdown>
     </div>
   </div>
 </template>
