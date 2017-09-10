@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-sm-2">
             <div class="link-container">
-              <router-link to="home test">HOME</router-link>
+              <router-link to="home">HOME</router-link>
             </div>
           </div>
           <div class="col-sm-2">
@@ -61,7 +61,7 @@ export default {
     margin-left: 10px;
   }
   .header {
-    font-size: 65px;
+    font-size: 75px;
     font-family: 'Oregano', cursive;
     /*red*/
     color: #5f1e1a;

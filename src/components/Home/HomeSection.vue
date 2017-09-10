@@ -43,6 +43,7 @@ export default {
 <style lang="css" scoped>
   .barley{
     width: 600px;
+    margin: 10px;
   }
   .saveDateText{
     margin-top: 30px;
