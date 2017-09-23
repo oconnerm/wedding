@@ -4,15 +4,12 @@
     <button @click="getGuestsFunc" type="button" name="button">Get List</button>
     <div v-for="item in arr">
       <h3>{{item.one_name}}</h3>
-      <h3>{{item.one_attending_ceremony}}</h3>
-      <h3>{{item.one_attending_reception}}</h3>
+      <h3>{{item.one_attending}}</h3>
       <h3>{{item.comments}}</h3>
       <h3>{{item.two_name}}</h3>
-      <h3>{{item.two_attending_ceremony}}</h3>
-      <h3>{{item.two_attending_reception}}</h3>
+      <h3>{{item.two_attending}}</h3>
       <h3>{{item.three_name}}</h3>
-      <h3>{{item.three_attending_ceremony}}</h3>
-      <h3>{{item.three_attending_reception}}</h3>
+      <h3>{{item.three_attending}}</h3>
     </div>
   </div>
 </template>
