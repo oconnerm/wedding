@@ -7,6 +7,7 @@ import Rsvp from '@/components/RSVP/RsvpSection'
 import Party from '@/components/Party/PartySection'
 import Photos from '@/components/Photos/PhotoSection'
 import GuestList from '@/components/GuestList/GuestListSection'
+import SongRequest from '@/components/Song/SongRequest'
 
 Vue.use(Router)
 
@@ -55,6 +56,11 @@ export default new Router({
       path: '/saveDate',
       name: 'saveDate',
       component: Home
+    },
+    {
+      path: '/songRequest',
+      name: 'SongRequest',
+      component: SongRequest
     }
   ]
 })
