@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app" class="container">
-    <div class="panel-headin">
-      <h3>Request a song!</h3>
+    <div class="panel-heading">
+      <h4>Request a song!</h4>
     </div>
     <div class="panel-body">
       <form id="form" class="form-inline" v-on:submit.prevent="addSong">
@@ -17,14 +17,14 @@
           <label for="songName">Your Name:</label>
           <input type="text" id="songName" class="form-control" v-model="newSong.name">
         </div>
-        <input type="submit" class="btn btn-primary" value="Add Song"></input>
       </form>
+      <input type="submit" class="btn btn-primary" value="Add Song"></input>
     </div>
   <div class="panel-heading">
-    <h3>Songs Requested</h3>
+    <h4>Songs Requested</h4>
   </div>
   <div class="panel-body">
-    <table class="tabel table-striped">
+    <table class="table table-striped">
       <thead name="newSong">
         <tr>
           <th>
