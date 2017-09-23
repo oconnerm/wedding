@@ -17,8 +17,8 @@
           <label for="songName">Your Name:</label>
           <input type="text" id="songName" class="form-control" v-model="newSong.name">
         </div>
+        <input type="submit" class="btn btn-primary" value="Add Song"></input>
       </form>
-      <input type="submit" class="btn btn-primary" value="Add Song"></input>
     </div>
   <div class="panel-heading">
     <h4>Songs Requested</h4>
