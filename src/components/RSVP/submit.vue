@@ -3,79 +3,62 @@
     <h1>Join Becca and Ryan!</h1>
 
     <b-btn v-b-modal.modal1>Find your reservation</b-btn>
-    <b-modal :hideFooter='true' ref="my_modal" id="modal1" title="Submit your code" @next="sendRsvp">
-      <form @submit.stop.prevent="requestNames">
-        <b-form-input type="text" placeholder="Enter your code" v-model="guestInput"></b-form-input>
-        <button @click="requestNames" type="button" name="button">Look up code</button>
-      </form>
+
+    <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
+      <div class="form" v-if="!query">
+        <form @submit.stop.prevent="requestNames">
+          <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your code" v-model="guestInput"></b-form-input>
+          <!-- <br> -->
+          <b-btn @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-btn>
+        </form>
+      </div>
       <div v-if='query'>
-        <div v-if="!two_name">
-          <h2>Name on your RSVP:</h2>
-          <h3>{{one_name}}</h3>
-        </div>
-        <div v-else>
-          <h2>Names on your RSVP:</h2>
-          <h3>{{one_name}}</h3>
-          <h3>{{two_name}}</h3>
-        </div>
-        <hr>
 
         <!-- Guest Number 1-->
-        <h4>Is {{one_name}} attending the Ceremony?</h4>
-        <select v-model="one_ceremony">
-          <option disabled value="">Please select one</option>
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-        <h4>Is {{one_name}} attending the Reception?</h4>
-        <select v-model="one_reception">
-          <option disabled value="">Please select one</option>
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-        <br>
-        <h4>What would {{one_name}} like for dinner?</h4>
-        <input type="radio" v-model="one_guestFood" id="steak" value="Steak">
-        <label for="steak">Steak</label>
-        <input type="radio" v-if="query" v-model="one_guestFood" id="chicken" value="Chicken">
-        <label for="chicken">Chicken</label>
-        <br>
-
-        <!-- Guest Number 2-->
-        <div v-if="two_name">
-          <hr>
-          <h4>Is {{two_name}} attending the Ceremony?</h4>
-          <select v-model="two_ceremony">
-            <option disabled value="">Please select one</option>
-            <option>Yes</option>
-            <option>No</option>
-          </select>
-          <h4 >Is {{two_name}} attending the Reception?</h4>
-          <select v-model="two_reception">
-            <option disabled value="">Please select one</option>
-            <option>Yes</option>
-            <option>No</option>
-          </select>
-          <br>
-          <h4 >What would {{two_name}} like for dinner?</h4>
-          <input type="radio" v-if="two_name" v-model="two_guestFood" id="steak" value="Steak">
-          <label  for="steak">Steak</label>
-          <input type="radio" v-if="two_name" v-model="two_guestFood" id="chicken" value="Chicken">
-          <label for="chicken">Chicken</label>
-          <br>
-          <hr>
+        <h5>Guest 1 of {{guest_count}}</h5>
+        <h1>{{one_name}}</h1>
+        <h4>Will You be able to attend?</h4>
+        <div>
+          <b-button @click="one_attending = true" :pressed="true" variant="success">Accept</b-button>
+          <b-button @click="one_attending = false" :pressed="true" variant="danger">Regret</b-button>
         </div>
-        <!-- Submit and comments section-->
-        <h4>Leave us a comment! (Optional)</h4>
-        <textarea v-model="comments" placeholder="Write us something cute!"></textarea>
-        <button @click.prevent="sendRsvp" name="button">Submit</button>
+        <br>
+        <h2>Status</h2>
+        <h3 v-if="one_attending">{{one_name}} will be attending.</h3>
+        <h3 v-else>{{one_name}} hates Ryan and Becca.</h3>
+        <div v-if="isOneGuest">
+          <b-btn class="float-right" @click.prevent="sendRsvp" name="button">Submit</b-btn>
+        </div>
+        <div v-else>
+            <b-btn v-b-modal.modal2 @click.prevent="sendRsvp" class="float-right">Next</b-btn>
+        </div>
+        <br>
+      </div>
+    </b-modal>
+
+  <!-- Guest Number 2-->
+    <b-modal size="lg" :hideFooter='true' ref="my_modal2" id="modal2" title="RSVP" @next="sendRsvp">
+      <div v-if='query'>
+        <hr>
+        <h5>Guest 2 of {{guest_count}}</h5>
+        <h1>{{two_name}}</h1>
+        <h4>Will You be able to attend?</h4>
+        <div>
+          <b-button @click="two_attending = true" :pressed="true" variant="success">Accept</b-button>
+          <b-button @click="two_attending = false" :pressed="true" variant="danger">Regret</b-button>
+        </div>
+        <br>
+        <h2>Status</h2>
+        <h3 v-if="two_attending">{{two_name}} will be attending.</h3>
+        <h3 v-else>{{two_name}} hates Ryan and Becca.</h3>
+        <b-btn class='float-right' @click.prevent="sendRsvp" name="button">Submit</b-btn>
+        <br>
       </div>
     </b-modal>
   </div>
 </template>
 
 <script>
-
 import Firebase from 'Firebase'
 
 let config = {
@@ -91,18 +74,24 @@ Firebase.initializeApp(config)
 export default {
   data () {
     return {
-      // TODO: Show previous data if already submitted
+      guest: '',
       guestInput: '',
       query: false,
       one_name: '',
-      one_ceremony: '',
-      one_reception: '',
-      one_guestFood: '',
+      one_attending: false,
       two_name: '',
-      two_ceremony: '',
-      two_reception: '',
-      two_guestFood: '',
-      comments: ''
+      two_attending: '',
+      comments: '',
+      guest_count: ''
+    }
+  },
+  computed: {
+    isOneGuest () {
+      let val = false
+      if (this.guest_count === 1) {
+        val = true
+      }
+      return val
     }
   },
   methods: {
@@ -110,24 +99,31 @@ export default {
       var self = this
       var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
       codeQuery.once('value').then(function (snapshot) {
-        // TODO: Add more guests
         self.one_name = snapshot.val().one_name
         self.two_name = snapshot.val().two_name
+        self.guest_count = snapshot.val().guest_count
         self.query = true
       })
-      return code.cancel()
     },
-
+    hide () {
+      this.$refs.my_modal.hide()
+    },
     sendRsvp () {
       var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
-      codeQuery.update({'one_food': this.one_guestFood, 'one_attending_ceremony': this.one_reception, 'one_attending_reception': this.one_ceremony})
+      codeQuery.update({
+        'one_attending': this.one_attending
+      })
       if (this.two_name) {
-        codeQuery.update({'two_food': this.two_guestFood, 'two_attending_ceremony': this.two_reception, 'two_attending_reception': this.two_ceremony})
+        codeQuery.update({
+          'two_attending': this.two_attending
+        })
       }
-      codeQuery.update({'comments': this.comments})
+      codeQuery.update({
+        'comments': this.comments
+      })
       this.$refs.my_modal.hide()
+      this.$refs.my_modal2.hide()
     }
-    // TODO: Show the ueser has submitted an RSVP
   },
   props: {
     okDisabled: {
@@ -138,5 +134,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+body{
+  font-family: 'Oregano', cursive;
+}
+button{
+  font-family: 'Oregano', cursive;
+  border-radius: 4px;
+}
 </style>
