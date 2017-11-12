@@ -10,7 +10,7 @@
         <form @submit.stop.prevent="requestNames">
           <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
-          <b-button v-touch="requestNames" @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-button>
+          <b-button @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-button>
         </form>
       </div>
 =======
