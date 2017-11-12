@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="container">
-    <picture></picture>
+    <img class="pic" src="../../assets/alaska.png">
     <h1>The Wedding Party</h1>
     <partymember></partymember>
   </div>
@@ -8,17 +8,18 @@
 
 <script>
 
-import picture from './picture.vue'
 import partymember from './partymember.vue'
 
 export default {
   components: {
-    partymember,
-    picture
+    partymember
   }
 }
 
 </script>
 
 <style lang="css">
+.pic{
+  height: 400px;
+}
 </style>

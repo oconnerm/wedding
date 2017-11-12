@@ -25,11 +25,9 @@
 </template>
 
 <script>
-import picture from './picture.vue'
 import countdown from './countdown.vue'
 export default {
   components: {
-    picture,
     countdown
   },
   computed: {
