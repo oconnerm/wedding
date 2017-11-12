@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="container">
     <div class="box">
-      <picture></picture>
+      <img class="pic" src="../../assets/alaska3_shadow.png">
       <div v-if="!isSaveDate">
         <h4>Come celebrate our wedding!</h4>
         <h5>Friday, August 10, 2018</h5>
@@ -62,5 +62,8 @@ export default {
     font-weight: bold;
     font-size: 90px;
     color: #112339;
+  }
+  .pic{
+    height: 400px;
   }
 </style>
