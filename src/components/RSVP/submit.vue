@@ -3,8 +3,6 @@
     <h1>Join Becca and Ryan!</h1>
 
     <b-btn v-b-modal.modal1>Find your reservation</b-btn>
-<<<<<<< HEAD
-
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
@@ -13,13 +11,6 @@
           <b-button @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-button>
         </form>
       </div>
-=======
-    <b-modal :hideFooter='true' ref="my_modal" id="modal1" title="Submit your code" @next="sendRsvp">
-      <form @submit.stop.prevent="requestNames">
-        <b-form-input type="text" placeholder="Enter your code" v-model="guestInput"></b-form-input>
-        <button @click="requestNames" type="button" name="button">Look up code</button>
-      </form>
->>>>>>> parent of 0ac9f0d... Merge pull request #15 from oconnerm/modalFix
       <div v-if='query'>
         <div v-if="!two_name">
           <h2>Name on your RSVP:</h2>
