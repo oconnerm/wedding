@@ -52,11 +52,8 @@
 
 <script>
 
-import picture from './picture.vue'
-
 export default {
   components: {
-    picture
   }
 }
 
