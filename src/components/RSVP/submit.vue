@@ -102,7 +102,6 @@ export default {
       one_reception: '',
       one_guestFood: '',
       two_name: '',
-<<<<<<< HEAD
       two_attending: '',
       guest_count: ''
     }
@@ -114,12 +113,6 @@ export default {
         val = true
       }
       return val
-=======
-      two_ceremony: '',
-      two_reception: '',
-      two_guestFood: '',
-      comments: ''
->>>>>>> parent of 0ac9f0d... Merge pull request #15 from oconnerm/modalFix
     }
   },
   methods: {
