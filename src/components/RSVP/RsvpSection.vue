@@ -1,23 +1,24 @@
 <template lang="html">
   <div id="app" class="container">
-    <picture></picture>
+    <img class="pic" src="../../assets/RB10.jpg">
     <submit></submit>
   </div>
 </template>
 
 <script>
 
-import picture from './picture.vue'
 import submit from './submit.vue'
 
 export default {
   components: {
-    submit,
-    picture
+    submit
   }
 }
 
 </script>
 
 <style lang="css">
+.pic{
+  height: 400px;
+}
 </style>
