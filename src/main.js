@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueFire from 'VueFire'
+import Vue2TouchEvents from 'vue2-touch-events'
 
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -10,6 +11,7 @@ import App from './App'
 import router from './router'
 Vue.use(VueFire)
 Vue.use(BootstrapVue)
+Vue.use(Vue2TouchEvents)
 
 Vue.config.productionTip = false
 
