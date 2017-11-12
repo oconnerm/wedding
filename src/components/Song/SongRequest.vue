@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="container">
-    <picture></picture>
+    <img class="pic" src="../../assets/alaska.png">
     <h1>Song Request</h1>
     <selectSong></selectSong>
   </div>
@@ -8,17 +8,18 @@
 
 <script>
 
-import picture from './picture.vue'
 import selectSong from './selectSong.vue'
 
 export default {
   components: {
-    selectSong,
-    picture
+    selectSong
   }
 }
 
 </script>
 
 <style lang="css">
+.pic{
+  height: 400px;
+}
 </style>
