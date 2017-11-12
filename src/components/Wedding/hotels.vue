@@ -26,7 +26,7 @@
       </div>
       <div class="col-md-4">
         <b-card title="Denver West Marriott">
-          <img slot="img" src="https://images.trvl-media.com/hotels/1000000/150000/140600/140596/140596_275_z.jpg" alt="img" class=" pic card-img-top img-fluid" />
+          <img slot="img" src="http://marijuanainvestorsummit.com/wp-content/uploads/2015/04/Gateway-Marriot-Denver.jpg" alt="img" class=" pic card-img-top img-fluid" />
           <p class="card-text">
             <p>303-279-9100</p>
             <p>1717 Denver West Blvd</p>
