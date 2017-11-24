@@ -1,7 +1,7 @@
 <template lang="html">
-  <div class="container">
+  <div class=" home-container">
     <div class="box">
-      <img class="pic" src="../../assets/alaska3_shadow.png">
+      <!--<img class="pic" src="../../assets/alaska3_shadow.png">-->
       <div v-if="!isSaveDate">
         <h4>Come celebrate our wedding!</h4>
         <h5>Friday, August 10, 2018</h5>
@@ -14,7 +14,7 @@
         <h2 class="mainText">Website under construction!</h2>
         </div>
       </div>
-      <div v-if="!isSaveDate">
+      <div v-if="!isSaveDate" class= "bride-and-groom">
         <h3>Rabecca Aragon</h3>
         <h3>&</h3>
         <h3>Ryan O'Connell</h3>
@@ -39,6 +39,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+  .home-container{
+    
+  }
   .barley{
     width: 600px;
     margin: 10px;
@@ -56,6 +60,15 @@ export default {
   .box {
     padding: 25px;
   }
+
+  .bride-and-groom{
+    text-align: center;
+  }
+
+  .bride-and-groom h3{
+    font-size: 1rem;
+  }
+    
   #date{
     font-weight: bold;
     font-size: 90px;

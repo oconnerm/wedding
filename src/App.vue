@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    <div class="row">
-        <div class="col-md-12 main">
+  <div class="body-container">
+    <div class="">
+        <div class="">
           <landing></landing>
           <router-view></router-view>
           <copy></copy>
@@ -23,7 +23,27 @@ export default {
 </script>
 
 <style>
-.main {
-  text-align: center;
-}
+    html{
+        overflow-x:hidden;
+    }
+    body{
+        width:100%;
+        border: 1px dotted cyan;
+    }
+    .main {
+      text-align: center;
+      font-size:16px;
+    }
+    
+    .container{
+        max-width:100%;
+    }
+
+    div.body-container{
+        /*background-color:cyan;*/
+        /*border: 1px dotted red;*/
+        margin: 0 auto;
+        max-width:none;
+    }
+
 </style>

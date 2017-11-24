@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-      <div class="container">
+  <div class="">
+      <div class="masthead">
         <Navigation></Navigation>
       </div>
     </div>
@@ -24,5 +24,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+    .masthead{
+        margin:0 auto;
+        width:100%;
+        padding:0;
+    }
 
 </style>

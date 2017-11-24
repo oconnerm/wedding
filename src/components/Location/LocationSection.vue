@@ -1,8 +1,8 @@
 <template lang="html">
-  <div class="container-fluid">
+  <div class="">
     <h1>The Pines at Genesee</h1>
-    <div class="row">
-      <div class="col-lg-12">
+    <div class="">
+      <div class="">
         <div class="mapContainer">
           <app-map></app-map>
         </div>
