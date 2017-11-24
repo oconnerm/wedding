@@ -22,4 +22,10 @@ export default {
 .pic{
   height: 400px;
 }
+h1 {
+  margin: 30px;
+  font-family: 'Oregano', cursive;
+  color: #5f1e1a;
+  font-weight: bold;
+}
 </style>
