@@ -1,27 +1,32 @@
 <template lang="html">
-  <div class="container">
-    <div class="box">
-      <img class="pic" src="../../assets/alaska3_shadow.png">
-      <div v-if="!isSaveDate">
-        <h4>Come celebrate our wedding!</h4>
-        <h5>Friday, August 10, 2018</h5>
-      </div>
-      <div class="saveDateText" v-if="isSaveDate">
-        <img class="barley" src='../../assets/barley_down.png'>
-        <h2 class="mainText">Save the date!</h2>
-        <h1 id="date">08.10.18</h1>
-        <img class="barley" src="../../assets/barley_up.png">
-        <h2 class="mainText">Website under construction!</h2>
+    <div class=" home-container">
+      <div class="content-container">
+        <div class="image-container"> 
+          <img class="pic" src="../../assets/alaska3_old.png">
         </div>
+        <div class="text-content">
+            <div v-if="!isSaveDate" class="saveDateHeading">
+              <h4>Come celebrate our wedding!</h4>
+              <h5>Friday, August 10, 2018</h5>     
+            </div>
+            <span class="saveDateHeadingSpacer"></span>
+            <div class="saveDateText" v-if="isSaveDate">
+              <img class="barley" src='../../assets/barley_down.png'>
+              <h2 class="mainText">Save the date!</h2>
+              <h1 id="date">08.10.18</h1>
+              <img class="barley" src="../../assets/barley_up.png">
+              <h2 class="mainText">Website under construction!</h2>
+            </div>
+            <div v-if="!isSaveDate" class= "bride-and-groom">
+              <h3>Rabecca Aragon</h3>
+              <h3>&</h3>
+              <h3>Ryan O'Connell</h3>
+            </div>
+            <span class="saveDateHeadingSpacer"></span>
+            <countdown></countdown>
+        </div><!--end .text-content-->
       </div>
-      <div v-if="!isSaveDate">
-        <h3>Rabecca Aragon</h3>
-        <h3>&</h3>
-        <h3>Ryan O'Connell</h3>
-      </div>
-      <countdown></countdown>
     </div>
-  </div>
 </template>
 
 <script>
@@ -39,10 +44,130 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+  .home-container{
+    
+  }
+
+  @media screen and (min-width: 46.875em) {
+        .home-container{
+            position:relative;
+        }
+  }
+    
+  .home-container .image-container {
+    text-align:center;
+  }
+
+  @media screen and (min-width: 31.25em) {
+
+        .home-container .image-container {
+            width:80%;
+            margin:0 auto;
+            
+        }
+        
+  }
+
+  @media screen and (min-width: 46.875em) {
+         .home-container .image-container {
+            width:50%;
+            margin:0;
+        }
+  }
+   
+  .home-container .image-container img{ 
+        width: 100%;
+        height:auto;
+        padding: 1rem 0;
+  }
+
+    @media screen and (min-width: 46.875em) {
+        .home-container .image-container img{ 
+            display:inline-block;
+            padding: 0;
+            margin:0;
+        }
+    }
+
   .barley{
     width: 600px;
     margin: 10px;
   }
+
+  .saveDateHeading{
+    width:100%;
+    text-align:center;
+    color: #5f1e1a;
+    padding: 0 0 1.25rem 0;
+  }
+
+  .saveDateHeading h4{
+    font-size:1.25rem;
+    margin:0;
+  }
+    
+  .saveDateHeading h5{
+    font-size:1.25rem;
+    margin:0;
+  }
+
+  @media screen and (min-width: 31.25em) {
+        .saveDateHeading{padding: 0 0 1.5rem 0;}
+
+        .saveDateHeading h4{
+            font-size:1.5rem;
+            
+        }
+
+        .saveDateHeading h5{
+            font-size:1.5rem;
+           
+        }
+  }
+
+  @media screen and (min-width: 53.125em){
+        .saveDateHeading{padding: 0 0 2rem 0;}
+  }
+
+  @media screen and (min-width: 62.5em){
+        .saveDateHeading{padding: 0 0 3rem 0;}
+  }
+  
+
+
+
+  .saveDateHeadingSpacer{
+    display:block;
+    margin:0 auto;
+    width:60%;
+    border-bottom: 2px solid #eee;
+  }
+
+  @media screen and (min-width: 31.25em) {
+    .saveDateHeadingSpacer{width:50%;}
+  }
+  
+  @media screen and (min-width: 46.875em) {
+        .text-content{
+            position:absolute;
+            padding-top: 2rem;
+            width: 50%;
+            top:0;
+            left: 50%;
+        }
+  }
+
+  @media screen and (min-width: 53.125em){
+        .text-content{padding-top: 2.5rem;}
+  }
+  
+  @media screen and (min-width: 62.5em){
+        .text-content{padding-top: 3rem;}
+  }
+  
+  
+
   .saveDateText{
     margin-top: 30px;
     font-family: 'Oregano', cursive;
@@ -56,6 +181,35 @@ export default {
   .box {
     padding: 25px;
   }
+
+  .bride-and-groom{
+    text-align: center;
+    padding: 1.25rem 0;
+  }
+
+  .bride-and-groom h3{
+    font-size: 2rem;
+    font-family: 'Oregano', cursive;
+  }
+
+  @media screen and (min-width: 31.25em) {
+    .bride-and-groom h3{
+        font-size: 2.25rem;
+    }
+  }
+
+  @media screen and (min-width: 62.5em){
+    .bride-and-groom h3{
+        font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 53.125em){
+    .bride-and-groom{
+        padding: 1.75rem 0;
+    }
+  }
+    
   #date{
     font-weight: bold;
     font-size: 90px;
