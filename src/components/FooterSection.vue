@@ -12,4 +12,7 @@
     margin-top: 30px;
     color: #999999;
   }
+  .copyRight p{
+    text-align:center;
+  }
 </style>

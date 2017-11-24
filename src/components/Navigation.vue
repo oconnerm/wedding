@@ -74,7 +74,14 @@ export default {
         width:100%;
         padding: 1rem 0;
         text-align:center;
-        font-size: 45px;
+        font-size: 2.25rem;
+    }
+    
+    @media screen and (min-width: 46.875em) {
+        .header.banner{    
+            padding: 1rem 0;
+            font-size: 2.75rem;
+        }
     }
 
     .nav-div{

@@ -27,8 +27,7 @@ export default {
         overflow-x:hidden;
     }
     body{
-        width:100%;
-        border: 1px dotted cyan;
+        width:100%;     
     }
     .main {
       text-align: center;
