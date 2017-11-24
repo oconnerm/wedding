@@ -70,6 +70,7 @@ h2 {
 }
 #fancyLine {
   width: 100%;
+  margin-top: 30px;
 }
 #weddingParty {
   float: left;
