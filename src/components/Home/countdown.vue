@@ -106,7 +106,7 @@ div.countdownElement p:nth-child(2){
 }
 
 @media screen and (min-width: 31.25em) {
-    .countdownContainer{padding: 1.25rem 0;}
+    .countdownContainer{padding: 0.5rem 0;}
 
     div.countdownElement p:first-child{
         font-size: 1.75rem;

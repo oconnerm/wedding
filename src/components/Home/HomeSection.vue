@@ -9,7 +9,7 @@
               <h4>Come celebrate our wedding!</h4>
               <h5>Friday, August 10, 2018</h5>     
             </div>
-            <span class="saveDateHeadingSpacer"></span>
+            <span v-if="!isSaveDate" class="saveDateHeadingSpacer"></span>
             <div class="saveDateText" v-if="isSaveDate">
               <img class="barley" src='../../assets/barley_down.png'>
               <h2 class="mainText">Save the date!</h2>
@@ -22,7 +22,7 @@
               <h3>&</h3>
               <h3>Ryan O'Connell</h3>
             </div>
-            <span class="saveDateHeadingSpacer"></span>
+            <span v-if="!isSaveDate" class="saveDateHeadingSpacer"></span>
             <countdown></countdown>
         </div><!--end .text-content-->
       </div>
@@ -91,9 +91,13 @@ export default {
     }
 
   .barley{
-    width: 600px;
-    margin: 10px;
+    width: 80%;
+    text-align:center;
+    margin: 0 auto;
+    display:block;
   }
+
+
 
   .saveDateHeading{
     width:100%;
@@ -113,7 +117,7 @@ export default {
   }
 
   @media screen and (min-width: 31.25em) {
-        .saveDateHeading{padding: 0 0 1.5rem 0;}
+        .saveDateHeading{padding: 2rem 0 1.5rem 0;}
 
         .saveDateHeading h4{
             font-size:1.5rem;
@@ -151,7 +155,6 @@ export default {
   @media screen and (min-width: 46.875em) {
         .text-content{
             position:absolute;
-            padding-top: 2rem;
             width: 50%;
             top:0;
             left: 50%;
@@ -170,16 +173,27 @@ export default {
 
   .saveDateText{
     margin-top: 30px;
+    width:100%;
     font-family: 'Oregano', cursive;
     color: #5f1e1a;
     font-weight: bold;
   }
-  .mainText{
-    margin-top: 10px;
-    font-size: 65px;
+  
+  @media screen and (min-width: 31.25em) {
+          .saveDateText{
+                margin:0;
+          }
   }
-  .box {
-    padding: 25px;
+
+  .mainText{
+    margin-top: 0.75rem;
+    text-align:center;
+    margin: 0.5rem auto;
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: 46.875em) {
+    .mainText{padding: 0 1rem;}
   }
 
   .bride-and-groom{
@@ -212,10 +226,10 @@ export default {
     
   #date{
     font-weight: bold;
-    font-size: 90px;
+    font-size: 3.5rem;
+    text-align:center;
+    margin:0 auto 0.5rem;
     color: #112339;
   }
-  .pic{
-    height: 400px;
-  }
+  
 </style>
