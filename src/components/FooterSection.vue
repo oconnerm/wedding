@@ -1,6 +1,6 @@
 <template lang="html">
 <div class="copyRight">
-  <p>&copy; Anu and Ryan 2017</p>
+  <p>&copy; Anu, Michael and Ryan Project 2017</p>
 </div>
 </template>
 

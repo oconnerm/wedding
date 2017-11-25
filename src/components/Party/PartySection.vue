@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="container">
-    <img class="pic" src="../../assets/alaska.png">
     <h1>The Wedding Party</h1>
     <partymember></partymember>
   </div>

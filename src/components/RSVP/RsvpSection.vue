@@ -1,6 +1,5 @@
 <template lang="html">
   <div id="app" class="container">
-    <img class="pic" src="../../assets/RB10.jpg">
     <submit></submit>
   </div>
 </template>
