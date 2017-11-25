@@ -7,52 +7,89 @@
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
+
           <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
-          <b-btn @click.natvie="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-btn>
+          <b-btn @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-btn>
         </form>
       </div>
       <div v-if='query'>
-
-        <!-- Guest Number 1-->
-        <h5>Guest 1 of {{guest_count}}</h5>
-        <h1>{{one_name}}</h1>
-        <h4>Will You be able to attend?</h4>
-        <div>
+        <h4>Will {{one_name}} be able to attend?</h4>
+        <div class="button-div">
           <b-button @click="one_attending = true" :pressed="true" variant="success">Accept</b-button>
           <b-button @click="one_attending = false" :pressed="true" variant="danger">Regret</b-button>
         </div>
         <br>
-        <h2>Status</h2>
-        <h3 v-if="one_attending">{{one_name}} will be attending.</h3>
-        <h3 v-else>{{one_name}} hates Ryan and Becca.</h3>
-        <div v-if="isOneGuest">
-          <b-btn class="float-right" @click.prevent="sendRsvp" name="button">Submit</b-btn>
+        <h5 v-if="one_attending">{{one_name}} will be attending!</h5>
+        <h5 v-else>{{one_name}} is <span id="not">not</span> attending.</h5>
+
+        <!-- Guest Number 2-->
+        <div v-if="two_name">
+          <hr>
+          <h4>Will {{two_name}} be able to attend?</h4>
+          <div class="button-div">
+            <b-button @click="two_attending = true" :pressed="true" variant="success">Accept</b-button>
+            <b-button @click="two_attending = false" :pressed="true" variant="danger">Regret</b-button>
+          </div>
+          <br>
+          <h5 v-if="two_attending">{{two_name}} will be attending!</h5>
+          <h5 v-else>{{two_name}} is <span id="not">not</span> attending.</h5>
         </div>
-        <div v-else>
-            <b-btn v-b-modal.modal2 @click.prevent="sendRsvp" class="float-right">Next</b-btn>
+        <!-- Guest Number 3-->
+        <div v-if="three_name">
+          <hr>
+          <h4>Will {{three_name}} be able to attend?</h4>
+          <div class="button-div">
+            <b-button @click="three_attending = true" :pressed="true" variant="success">Accept</b-button>
+            <b-button @click="three_attending = false" :pressed="true" variant="danger">Regret</b-button>
+          </div>
+          <br>
+          <h5 v-if="three_attending">{{three_name}} will be attending!</h5>
+          <h5 v-else>{{three_name}} is <span id="not">not</span> attending.</h5>
+        </div>
+        <!-- Guest Number 4-->
+        <div v-if="four_name">
+          <hr>
+          <h4>Will {{four_name}} be able to attend?</h4>
+          <div class="button-div">
+            <b-button @click="four_attending = true" :pressed="true" variant="success">Accept</b-button>
+            <b-button @click="four_attending = false" :pressed="true" variant="danger">Regret</b-button>
+          </div>
+          <br>
+          <h5 v-if="four_attending">{{four_name}} will be attending!</h5>
+          <h5 v-else>{{four_name}} is <span id="not">not</span> attending.</h5>
         </div>
         <br>
       </div>
-    </b-modal>
-
-  <!-- Guest Number 2-->
-    <b-modal size="lg" :hideFooter='true' ref="my_modal2" id="modal2" title="RSVP" @next="sendRsvp">
-      <div v-if='query'>
+      <!-- Guest Number 5-->
+      <div v-if="five_name">
         <hr>
-        <h5>Guest 2 of {{guest_count}}</h5>
-        <h1>{{two_name}}</h1>
-        <h4>Will You be able to attend?</h4>
-        <div>
-          <b-button @click="two_attending = true" :pressed="true" variant="success">Accept</b-button>
-          <b-button @click="two_attending = false" :pressed="true" variant="danger">Regret</b-button>
+        <h4>Will {{five_name}} be able to attend?</h4>
+        <div class="button-div">
+          <b-button @click="five_attending = true" :pressed="true" variant="success">Accept</b-button>
+          <b-button @click="five_attending = false" :pressed="true" variant="danger">Regret</b-button>
         </div>
         <br>
-        <h2>Status</h2>
-        <h3 v-if="two_attending">{{two_name}} will be attending.</h3>
-        <h3 v-else>{{two_name}} hates Ryan and Becca.</h3>
-        <b-btn class='float-right' @click.prevent="sendRsvp" name="button">Submit</b-btn>
+        <h5 v-if="five_attending">{{five_name}} will be attending!</h5>
+        <h5 v-else>{{five_name}} is <span id="not">not</span> attending.</h5>
         <br>
+      </div>
+
+
+      <div v-if="plus_one_option" class="button-div">
+        <h4>Do you have a plus one?</h4>
+        <b-button @click="has_plus_one = true" :pressed="true" variant="primary">Accept</b-button>
+        <b-button @click="has_plus_one = false" :pressed="true" variant="primary">Regret</b-button>
+        <br>
+        <div v-if="has_plus_one">
+          <b-col sm="10">
+            <br>
+            <b-form-input id="input-default" type="text" v-model="plus_one_name" placeholder="Enter guest name"></b-form-input>
+          </b-col>
+        </div>
+      </div>
+      <div v-if="submitShow">
+        <b-btn class="float-right" @click.prevent="sendRsvp" name="button">Submit</b-btn>
       </div>
     </b-modal>
   </div>
@@ -78,11 +115,20 @@ export default {
       guestInput: '',
       query: false,
       one_name: '',
-      one_attending: false,
+      one_attending: '',
       two_name: '',
       two_attending: '',
-      comments: '',
-      guest_count: ''
+      guest_count: '',
+      three_name: '',
+      three_attending: '',
+      four_name: '',
+      four_attending: '',
+      five_name: '',
+      five_attending: '',
+      plus_one_option: '',
+      has_plus_one: false,
+      submitShow: false,
+      plus_one_name: ''
     }
   },
   computed: {
@@ -95,13 +141,30 @@ export default {
     }
   },
   methods: {
-    requestNames (code) {
+    submitToggle () {
+      if (this.submitShow) {
+        this.submitShow = false
+      } else {
+        this.submitShow = true
+      }
+    },
+    requestNames () {
+      if (this.submitShow) {
+        this.submitShow = false
+      } else {
+        this.submitShow = true
+      }
+      let code = this.guestInput.toLowerCase()
       var self = this
-      var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
+      var codeQuery = Firebase.database().ref('guest_code').child(code)
       codeQuery.once('value').then(function (snapshot) {
         self.one_name = snapshot.val().one_name
         self.two_name = snapshot.val().two_name
+        self.three_name = snapshot.val().three_name
+        self.four_name = snapshot.val().four_name
+        self.five_name = snapshot.val().five_name
         self.guest_count = snapshot.val().guest_count
+        self.plus_one_option = snapshot.val().plus_one_option
         self.query = true
       })
     },
@@ -118,11 +181,27 @@ export default {
           'two_attending': this.two_attending
         })
       }
-      codeQuery.update({
-        'comments': this.comments
-      })
+      if (this.three_name) {
+        codeQuery.update({
+          'three_attending': this.three_attending
+        })
+      }
+      if (this.four_name) {
+        codeQuery.update({
+          'four_attending': this.four_attending
+        })
+      }
+      if (this.five_name) {
+        codeQuery.update({
+          'five_attending': this.five_attending
+        })
+      }
+      if (this.plus_one_name) {
+        codeQuery.update({
+          'plus_one_name': this.plus_one_name
+        })
+      }
       this.$refs.my_modal.hide()
-      this.$refs.my_modal2.hide()
     }
   },
   props: {
@@ -135,6 +214,20 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  button.btn.btn-secondary{
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  h4, h5{
+    text-align: center;
+  }
+  div.button-div{
+    text-align: center;
+  }
+#not{
+  font-style: italic;
+}
 body{
   font-family: 'Oregano', cursive;
 }
