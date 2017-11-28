@@ -34,7 +34,7 @@ export default {
 
 <style lang="css" scoped>
   .g-map{
-    width: 500px;
+    width: 100%;
     height: 300px;
     margin: auto;
   }

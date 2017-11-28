@@ -86,6 +86,7 @@ export default {
 
     .nav-div{
         width:100%;
+        max-width:1100px;
         margin: auto;
         padding: 0;
         
@@ -118,6 +119,14 @@ export default {
         text-align:center;
         
     }
+
+    @media screen and (min-width:50em){
+        .nav-button{
+            -webkit-flex: 1 0 16%;
+            -ms-flex: 1 0 16%;
+            flex: 1 0 16%;
+        }
+    }
     
     .nav-button a{
         display:block;
@@ -134,9 +143,6 @@ export default {
 
 
     @media only screen and (max-width: 768px) {
-      .link-container{
-        /*font-size: 16px;*/
-      }
 
       #party{
         padding-left: 10px;
