@@ -46,7 +46,7 @@ export default {
 <style lang="css" scoped>
 
   .home-container{
-    
+    max-width:1100px;
   }
 
   @media screen and (min-width: 46.875em) {
@@ -54,9 +54,16 @@ export default {
             position:relative;
         }
   }
+
+  @media screen and (min-width:68.75em){
+        .home-container{
+            margin: 0 auto;
+        }
+  }
     
   .home-container .image-container {
     text-align:center;
+    margin:0;
   }
 
   @media screen and (min-width: 31.25em) {
