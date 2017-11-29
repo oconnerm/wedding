@@ -86,6 +86,7 @@ export default {
   .home-container .image-container img{ 
         width: 100%;
         height:auto;
+        margin:0;
         padding: 1rem 0;
   }
 
