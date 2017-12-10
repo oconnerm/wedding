@@ -1,7 +1,6 @@
 <template lang="html">
   <div id="app" class="container">
     <h1>Join Becca and Ryan!</h1>
-
     <b-btn v-b-modal.modal1>Find your reservation</b-btn>
 
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
@@ -10,10 +9,15 @@
 
           <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
-          <b-btn @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-btn>
+          <b-btn :disabled="findButtonDisable" @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-btn>
         </form>
       </div>
       <div v-if='query'>
+        <div class="info">
+          <h3 class="date">August 10th 2018</h3>
+          <h4 class="address">The Pines at Genesee 633 Park Point Dr </br> Golden, CO 80401</h4>
+        </div>
+        <img class='barley' src="../../../src/assets/barley_up.png"/>
         <h4>Will {{one_name}} be able to attend?</h4>
         <div class="button-div">
           <b-button @click="one_attending = true" :pressed="true" variant="success">Accept</b-button>
@@ -25,7 +29,7 @@
           <img src="../../../src/assets/happy.png" />
         </div>
         <div v-else>
-          <h5>{{one_name}} will <span id="not">not</span> attending.</h5>
+          <h5>{{one_name}} will <span id="not">not</span> be attending.</h5>
           <img src="../../../src/assets/sad.png" />
         </div>
       </div>
@@ -43,7 +47,7 @@
             <img src="../../../src/assets/happy.png" />
           </div>
           <div v-else>
-            <h5>{{two_name}} will <span id="not">not</span> attending.</h5>
+            <h5>{{two_name}} will <span id="not">not</span> be attending.</h5>
             <img src="../../../src/assets/sad.png" />
           </div>
         </div>
@@ -61,7 +65,7 @@
             <img src="../../../src/assets/happy.png" />
           </div>
           <div v-else>
-            <h5>{{three_name}} will <span id="not">not</span> attending.</h5>
+            <h5>{{three_name}} will <span id="not">not</span> be attending.</h5>
             <img src="../../../src/assets/sad.png" />
           </div>
         </div>
@@ -79,7 +83,7 @@
             <img src="../../../src/assets/happy.png" />
           </div>
           <div v-else>
-            <h5>{{four_name}} will <span id="not">not</span> attending.</h5>
+            <h5>{{four_name}} will <span id="not">not</span> be attending.</h5>
             <img src="../../../src/assets/sad.png" />
           </div>
         </div>
@@ -97,7 +101,7 @@
           <img src="../../../src/assets/happy.png" />
         </div>
         <div v-else>
-          <h5>{{five_name}} will <span id="not">not</span> attending.</h5>
+          <h5>{{five_name}} will <span id="not">not</span> be attending.</h5>
           <img src="../../../src/assets/sad.png" />
         </div>
       </div>
@@ -123,6 +127,11 @@
         <div class="submit">
             <b-btn class="float-right" @click.prevent="sendRsvp" name="button">Submit</b-btn>
         </div>
+      </div>
+    </b-modal>
+    <b-modal ref="errorModal" cancel-disabled ok-only>
+      <div class="d-block text-center">
+        <h5>Sorry, code is not recognized.</h5>
       </div>
     </b-modal>
   </div>
@@ -171,6 +180,13 @@ export default {
         val = true
       }
       return val
+    },
+    findButtonDisable () {
+      if (!this.guestInput) {
+        return true
+      } else {
+        return false
+      }
     }
   },
   methods: {
@@ -182,11 +198,11 @@ export default {
       }
     },
     requestNames () {
-      if (this.submitShow) {
-        this.submitShow = false
-      } else {
-        this.submitShow = true
-      }
+      // if (this.submitShow) {
+      //   this.submitShow = false
+      // } else {
+      //   this.submitShow = true
+      // }
       let code = this.guestInput.toLowerCase()
       var self = this
       var codeQuery = Firebase.database().ref('guest_code').child(code)
@@ -199,13 +215,15 @@ export default {
         self.guest_count = snapshot.val().guest_count
         self.plus_one = snapshot.val().plus_one
         self.query = true
+        self.submitShow = true
+      }).catch(function (e) {
+        self.submitShow = false
+        self.showErrorModal()
       })
     },
-    hide () {
-      this.$refs.my_modal.hide()
-    },
     sendRsvp () {
-      var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
+      var lowercaseCode = this.guestInput.toLowerCase()
+      var codeQuery = Firebase.database().ref('guest_code').child(lowercaseCode)
       codeQuery.update({
         'one_attending': this.one_attending
       })
@@ -231,9 +249,14 @@ export default {
       }
       if (this.plus_one_name) {
         codeQuery.update({
-          'plus_one_name': this.plus_one_name
+          'plus_one_name': this.plus_one_name,
+          'guest_count': this.guest_count + 1
         })
       }
+      this.$refs.my_modal.hide()
+    },
+    showErrorModal () {
+      this.$refs.errorModal.show()
       this.$refs.my_modal.hide()
     }
   },
@@ -279,5 +302,9 @@ img {
 }
 .submit{
   margin-top: 20px;
+}
+.info{
+  text-align: center;
+  margin-bottom: 45px;
 }
 </style>
