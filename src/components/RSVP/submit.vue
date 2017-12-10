@@ -20,76 +20,109 @@
           <b-button @click="one_attending = false" :pressed="true" variant="danger">Regret</b-button>
         </div>
         <br>
-        <h5 v-if="one_attending">{{one_name}} will be attending!</h5>
-        <h5 v-else>{{one_name}} is <span id="not">not</span> attending.</h5>
-
+        <div v-if="one_attending">
+          <h5>{{one_name}} will be attending!</h5>
+          <img src="../../../src/assets/happy.png" />
+        </div>
+        <div v-else>
+          <h5>{{one_name}} will <span id="not">not</span> attending.</h5>
+          <img src="../../../src/assets/sad.png" />
+        </div>
+      </div>
         <!-- Guest Number 2-->
         <div v-if="two_name">
-          <hr>
+          <img class='barley' src="../../../src/assets/barley_up.png"/>
           <h4>Will {{two_name}} be able to attend?</h4>
           <div class="button-div">
             <b-button @click="two_attending = true" :pressed="true" variant="success">Accept</b-button>
             <b-button @click="two_attending = false" :pressed="true" variant="danger">Regret</b-button>
           </div>
           <br>
-          <h5 v-if="two_attending">{{two_name}} will be attending!</h5>
-          <h5 v-else>{{two_name}} is <span id="not">not</span> attending.</h5>
+          <div v-if="two_attending">
+            <h5>{{two_name}} will be attending!</h5>
+            <img src="../../../src/assets/happy.png" />
+          </div>
+          <div v-else>
+            <h5>{{two_name}} will <span id="not">not</span> attending.</h5>
+            <img src="../../../src/assets/sad.png" />
+          </div>
         </div>
         <!-- Guest Number 3-->
         <div v-if="three_name">
-          <hr>
+          <img class='barley' src="../../../src/assets/barley_up.png"/>
           <h4>Will {{three_name}} be able to attend?</h4>
           <div class="button-div">
             <b-button @click="three_attending = true" :pressed="true" variant="success">Accept</b-button>
             <b-button @click="three_attending = false" :pressed="true" variant="danger">Regret</b-button>
           </div>
           <br>
-          <h5 v-if="three_attending">{{three_name}} will be attending!</h5>
-          <h5 v-else>{{three_name}} is <span id="not">not</span> attending.</h5>
+          <div v-if="three_attending">
+            <h5>{{three_name}} will be attending!</h5>
+            <img src="../../../src/assets/happy.png" />
+          </div>
+          <div v-else>
+            <h5>{{three_name}} will <span id="not">not</span> attending.</h5>
+            <img src="../../../src/assets/sad.png" />
+          </div>
         </div>
         <!-- Guest Number 4-->
         <div v-if="four_name">
-          <hr>
+          <img class='barley' src="../../../src/assets/barley_up.png"/>
           <h4>Will {{four_name}} be able to attend?</h4>
           <div class="button-div">
             <b-button @click="four_attending = true" :pressed="true" variant="success">Accept</b-button>
             <b-button @click="four_attending = false" :pressed="true" variant="danger">Regret</b-button>
           </div>
           <br>
-          <h5 v-if="four_attending">{{four_name}} will be attending!</h5>
-          <h5 v-else>{{four_name}} is <span id="not">not</span> attending.</h5>
+          <div v-if="four_attending">
+            <h5>{{four_name}} will be attending!</h5>
+            <img src="../../../src/assets/happy.png" />
+          </div>
+          <div v-else>
+            <h5>{{four_name}} will <span id="not">not</span> attending.</h5>
+            <img src="../../../src/assets/sad.png" />
+          </div>
         </div>
-        <br>
-      </div>
       <!-- Guest Number 5-->
       <div v-if="five_name">
-        <hr>
+        <img class='barley' src="../../../src/assets/barley_up.png"/>
         <h4>Will {{five_name}} be able to attend?</h4>
         <div class="button-div">
           <b-button @click="five_attending = true" :pressed="true" variant="success">Accept</b-button>
           <b-button @click="five_attending = false" :pressed="true" variant="danger">Regret</b-button>
         </div>
         <br>
-        <h5 v-if="five_attending">{{five_name}} will be attending!</h5>
-        <h5 v-else>{{five_name}} is <span id="not">not</span> attending.</h5>
-        <br>
+        <div v-if="five_attending">
+          <h5>{{five_name}} will be attending!</h5>
+          <img src="../../../src/assets/happy.png" />
+        </div>
+        <div v-else>
+          <h5>{{five_name}} will <span id="not">not</span> attending.</h5>
+          <img src="../../../src/assets/sad.png" />
+        </div>
       </div>
-
-
-      <div v-if="plus_one_option" class="button-div">
+      <!-- plus one options -->
+      <div v-if="plus_one" class="button-div">
+        <img class='barley' src="../../../src/assets/barley_up.png"/>
         <h4>Do you have a plus one?</h4>
-        <b-button @click="has_plus_one = true" :pressed="true" variant="primary">Accept</b-button>
-        <b-button @click="has_plus_one = false" :pressed="true" variant="primary">Regret</b-button>
+        <b-button @click="has_plus_one = true" :pressed="true" variant="primary">Yes</b-button>
+        <b-button @click="has_plus_one = false" :pressed="true" variant="primary">No</b-button>
         <br>
-        <div v-if="has_plus_one">
+        <div v-if="plus_one">
           <b-col sm="10">
             <br>
-            <b-form-input id="input-default" type="text" v-model="plus_one_name" placeholder="Enter guest name"></b-form-input>
+            <div v-if="has_plus_one">
+              <div class="input">
+                <b-form-input id="input-default" type="text" v-model="plus_one_name" placeholder="Enter guest name"></b-form-input>
+              </div>
+            </div>
           </b-col>
         </div>
       </div>
       <div v-if="submitShow">
-        <b-btn class="float-right" @click.prevent="sendRsvp" name="button">Submit</b-btn>
+        <div class="submit">
+            <b-btn class="float-right" @click.prevent="sendRsvp" name="button">Submit</b-btn>
+        </div>
       </div>
     </b-modal>
   </div>
@@ -125,10 +158,10 @@ export default {
       four_attending: '',
       five_name: '',
       five_attending: '',
-      plus_one_option: '',
-      has_plus_one: false,
+      plus_one: '',
       submitShow: false,
-      plus_one_name: ''
+      plus_one_name: '',
+      has_plus_one: ''
     }
   },
   computed: {
@@ -164,7 +197,7 @@ export default {
         self.four_name = snapshot.val().four_name
         self.five_name = snapshot.val().five_name
         self.guest_count = snapshot.val().guest_count
-        self.plus_one_option = snapshot.val().plus_one_option
+        self.plus_one = snapshot.val().plus_one
         self.query = true
       })
     },
@@ -234,5 +267,17 @@ body{
 button{
   font-family: 'Oregano', cursive;
   border-radius: 4px;
+}
+img {
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.barley{
+    width: 600px;
+    height: 50px;
+}
+.submit{
+  margin-top: 20px;
 }
 </style>
