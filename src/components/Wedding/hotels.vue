@@ -2,43 +2,49 @@
   <div class="hotels-container">
     <h1>Hotels</h1>
     <div class="card-container">
-      <div class="card-wrap">
-        <b-card>
-          <img slot="img" src="https://media.xogrp.com/images/fd3c05ce-c1ef-4227-b8e6-285e44d959c8" alt="img" class=" card-img-top img-fluid" /> 
-          <div class="card-text">
-            <h4 class="card-title">Evergreen Comfort Suites</h4>
-            <p>303-526-2000</p>
-            <p>29300 U.S Highway 40</p>
-            <p>Evergreen, CO 80439</p>
-          </div>
-          <b-button class="button" href="http://goldenevergreenhotel.com/" target="_blank" variant="primary">Visit Site</b-button>
-        </b-card>
-      </div><!--.card-wrap-->
-      <div class="card-wrap">
-        <b-card>
-          <img slot="img" src="http://www.tablemountaininn.com/photogallery/large/hotel/table-mountain-inn-golden-exterior.jpg" alt="img" class=" card-img-top img-fluid" />
-          <div class="card-text">
-            <h4 class="card-title">Table Mountain Inn</h4>
-            <p>303-277-9898</p>
-            <p>1310 Washington Ave</p>
-            <p>Golden, CO 80401</p>
-          </div>
-          <b-button class="button" href="http://tablemountaininn.com/" variant="primary" target="_blank">Visit Site</b-button>
-        </b-card>
-      </div><!--.card-wrap-->
-      <div class="card-wrap">
-        <b-card>
-          <img slot="img" src="http://cache.marriott.com/propertyimages/d/denwe/denwe_main01.jpg" alt="img" class=" card-img-top img-fluid" />
-          <div class="card-text">
-           <h4 class="card-title">Denver West Marriott</h4>
-            <p>303-279-9100</p>
-            <p>1717 Denver West Blvd</p>
-            <p>Golden, CO 80401</p>
-          </div>
-          <b-button class="button" href="http://www.marriott.com/hotels/travel/denwe-denver-marriott-west/" target="_blank" variant="primary">Visit Site</b-button>
-        </b-card>
-      </div><!--.card-wrap-->
-    </div><!--.card-container-->
+       <div class="card-wrap">
+         <b-card>
+           <img slot="img" src="https://media.xogrp.com/images/fd3c05ce-c1ef-4227-b8e6-285e44d959c8" alt="img" class=" card-img-top img-fluid" /> 
+           <div class="card-text">
+             <h4 class="card-title">Evergreen Comfort Suites</h4>
+             <p>303-526-2000</p>
+             <p>29300 U.S Highway 40</p>
+             <p>Evergreen, CO 80439</p>
+           </div>
+           <div class="hotel-website">
+             <b-button class="button" href="http://goldenevergreenhotel.com/" target="_blank" variant="primary">Visit Site</b-button>
+           </div>
+         </b-card>
+       </div><!--.card-wrap-->
+       <div class="card-wrap">
+         <b-card>
+           <img slot="img" src="http://www.tablemountaininn.com/photogallery/large/hotel/table-mountain-inn-golden-exterior.jpg" alt="img" class=" card-img-top img-fluid" />
+           <div class="card-text">
+             <h4 class="card-title">Table Mountain Inn</h4>
+             <p>303-277-9898</p>
+             <p>1310 Washington Ave</p>
+             <p>Golden, CO 80401</p>
+           </div>
+           <div class="hotel-website">
+           <b-button class="button" href="http://tablemountaininn.com/" variant="primary" target="_blank">Visit Site</b-button>
+           </div>
+          </b-card>
+       </div><!--.card-wrap-->
+       <div class="card-wrap">
+         <b-card>
+           <img slot="img" src="http://cache.marriott.com/propertyimages/d/denwe/denwe_main01.jpg" alt="img" class=" card-img-top img-fluid" />
+           <div class="card-text">
+            <h4 class="card-title">Denver West Marriott</h4>
+             <p>303-279-9100</p>
+             <p>1717 Denver West Blvd</p>
+             <p>Golden, CO 80401</p>
+           </div>
+           <div class="hotel-website">
+             <b-button class="button" href="http://www.marriott.com/hotels/travel/denwe-denver-marriott-west/" target="_blank" variant="primary">Visit Site</b-button>
+           </div>
+         </b-card>
+       </div><!--.card-wrap-->
+     </div><!--.card-container-->
     <hr>
   </div>
 </template>
@@ -69,6 +75,8 @@ export default {}
             flex-flow: row;
 
             padding:0 2%;
+
+            
         }
     }
     
@@ -76,8 +84,8 @@ export default {}
         /*width:83%;*/
         width: 100%;
         border:none;
-        position:relative;
-        margin:0 auto 4rem;
+        
+        margin:0 auto 1rem;
 
         -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
         transition:all 0.25s ease-out;
@@ -97,13 +105,14 @@ export default {}
             -moz-box-shadow: -1px 5px 8px #eee;
             -webkit-box-shadow: -1px 5px 8px #eee;
             box-shadow: -1px 5px 8px #eee;
+            
         }
     }
     
      @media screen and (min-width: 50em){
         .card-wrap{
             width: 32%;
-            
+            position:relative;
         }
      }
 
@@ -115,69 +124,24 @@ export default {}
 
 
 
-    .card-wrap a{
-        position: absolute;
-        right: 8.5%;
-        bottom: -3rem;
-        -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
-        transition:all 0.25s ease-out;
+    .card-wrap .hotel-website{
+        text-align:center;
+        margin-bottom:1rem;
     }
 
-    @media screen and (min-width:26.875em){
-        .card-wrap a{
-            bottom: 1rem;
-        }
-    }
-
-    @media screen and (min-width:26.875em){
-        .card-wrap a{
-            bottom: 1rem;
-        }
-    }
-
-    @media screen and (min-width: 31.25em){
-        .card-wrap a{
-            bottom: 2rem;
-        }
-    }
-
-    @media screen and (min-width: 50em){
-        .card-wrap:nth-child(2) a{
-            bottom: 1.2rem;
-        }
-    }
-
-    @media screen and (min-width:  54.1875em){
-        .card-wrap:nth-child(3) a{
-            bottom: 0;
-        }
-    }
-
-    @media screen and (min-width:  65.3125em){
-        .card-wrap:first-child a{
-            bottom: 0;
-        }
-    }
-
-    @media screen and (min-width:68.75em ){
-        .card-wrap a{
+    @media screen and (min-width:50em){
+        .card-wrap .hotel-website{
             position:absolute;
-            bottom: 0;
-            margin:0;
-            
+            bottom:0.75rem;
+            left: calc(50% - (92.4531px / 2 ) );
         }
-
-        .card-wrap:nth-child(2) a{
-            bottom: 1.2rem;
-        }
-
     }
-
     
 
     .card{
         width:100%; 
         border:none;
+        position:static;
     }
     
     
@@ -198,12 +162,7 @@ export default {}
             padding:2rem 0 5rem 0 ;
         }
     }
-    
-    @media screen and (min-width:68.75em ){
-        .card-text{
-            padding:2rem 0 ;
-        }
-    }
+   
     
 
     .card-text p{
