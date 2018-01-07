@@ -1,9 +1,8 @@
 <template lang="html">
   <div id="app" class="container">
     <h1>Join Becca and Ryan!</h1>
-
-    <b-btn v-b-modal.modal1>Find your reservation</b-btn>
-
+    <hr>
+    <b-btn v-b-modal.modal1>Find your Invitation</b-btn>
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
