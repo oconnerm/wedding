@@ -1,39 +1,105 @@
 <template lang="html">
   <div>
-    <agile>
-        <div class="slide slide--1"><h3>slide 1</h3></div>
-        <div class="slide slide--2"><h3>slide 2</h3></div>
-        <div class="slide slide--3"><h3>slide 3</h3></div>
-        <div class="slide slide--4"><h3>slide 4</h3></div>
-        <div class="slide slide--5"><h3>slide 5</h3></div>
-        <div class="slide slide--6"><h3>slide 6</h3></div>
-    </agile>
+    <h1>Photos</h1>
+    <image-viewer :images="imageViewerParams.images"
+                  :index="imageViewerParams.index"
+                  :visible="imageViewerParams.visible"
+                  :page="imageViewerParams.page"
+                  @close="imageViewerParams.visible=false"></image-viewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import VueAgile from 'vue-agile'
+import imageViewer from 'vue-image-viewer'
+import 'vue-image-viewer/lib/vue-image-viewer.css'
 
-Vue.use(VueAgile)
+export default {
+  name: 'demo',
+  components: {
+    imageViewer
+  },
+  data () {
+    return {
+      imageViewerParams: {
+        visible: true,
+        index: 1,
+        page: 0,
+        images: [{
+          name: 'Image 1',
+          url: 'https://i.imgur.com/iCENwIf.png'
+        },
+        {
+          name: 'Image 2',
+          url: 'https://i.imgur.com/u17MvQo.png'
+        },
+        {
+          name: 'Image 3',
+          url: 'https://i.imgur.com/DLyjl0V.jpg'
+        },
+        {
+          name: 'Image 4',
+          url: 'https://i.imgur.com/kkdm7BK.jpg'
+        },
+        {
+          name: 'Image 5',
+          url: 'https://i.imgur.com/p7WWkhu.jpg'
+        },
+        {
+          name: 'Image 6',
+          url: 'https://i.imgur.com/yF14h7J.png'
+        },
+        {
+          name: 'Image 7',
+          url: 'https://i.imgur.com/JNvQfCj.jpg'
+        },
+        {
+          name: 'Image 8',
+          url: 'https://i.imgur.com/5CPesY0.jpg'
+        },
+        {
+          name: 'Image 9',
+          url: 'https://i.imgur.com/TgaI2Wk.jpg'
+        },
+        {
+          name: 'Image 10',
+          url: 'https://i.imgur.com/Z6Y8nzf.png'
+        },
+        {
+          name: 'Image 11',
+          url: 'https://i.imgur.com/84kWuGG.jpg'
+        },
+        {
+          name: 'Image 12',
+          url: 'https://i.imgur.com/XsPuf3U.png'
+        }]
+      }
+    }
+  },
+  methods: {
+    imageViewShow (index) {
+      if (index !== void 0) {
+        this.imageViewerParams.index = 0
+        this.imageViewerParams.visible = true
+      }
+    }
+  }
+}
 </script>
 
 <style>
-.slide {
-    color: #fff;
-    height: 300px;
-    position: relative;
-    &--1 {
-        background-color: #f1c40f;
-    }
-    h3 {
-        font-size: 32px;
-        font-weight: 300;
-        left: 50%;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+h1 {
+  margin: 30px;
+  font-family: 'Oregano', cursive;
+  color: #5f1e1a;
+  font-weight: bold;
+}
+.image-viewer-info {
+  display: none !important;
+}
+.image-viewer-nav-next {
+  display: none !important;
+}
+.image-viewer-nav-prev {
+  display: none !important;
 }
 </style>
