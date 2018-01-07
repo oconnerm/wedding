@@ -2,6 +2,37 @@
   <div class="hotels-container">
     <h1>Hotels</h1>
     <div class="card-container">
+
+       <div class="card-wrap">
+         <b-card>
+           <img slot="img" src="../../assets/residenceInn.jpg" alt="img" class=" card-img-top img-fluid" />
+           <div class="card-text">
+             <h4 class="card-title">Residence Inn by Marriott </h4>
+             <p>303-271-0909</p>
+             <p>14600 W 6th Ave Frontage Rd</p>
+             <p>Golden, CO 80401</p>
+           </div>
+           <div class="hotel-website">
+           <b-button class="button" href="http://www.marriott.com/hotels/travel/dengo-residence-inn-denver-west-golden/" variant="primary" target="_blank">Visit Site</b-button>
+           </div>
+          </b-card>
+       </div><!--.card-wrap-->
+
+       <div class="card-wrap">
+         <b-card>
+           <img slot="img" src="../../assets/courtyard.jpg" alt="img" class=" card-img-top img-fluid" />
+           <div class="card-text">
+            <h4 class="card-title">Courtyard by Marriott Denver </h4>
+             <p>303-271-0776</p>
+             <p>14700 6th Ave</p>
+             <p>Golden, CO 80401</p>
+           </div>
+           <div class="hotel-website">
+             <b-button class="button" href="http://www.marriott.com/hotels/travel/dengl-courtyard-denver-west-golden/" target="_blank" variant="primary">Visit Site</b-button>
+           </div>
+         </b-card>
+       </div><!--.card-wrap-->
+
        <div class="card-wrap">
          <b-card>
            <img slot="img" src="https://media.xogrp.com/images/fd3c05ce-c1ef-4227-b8e6-285e44d959c8" alt="img" class=" card-img-top img-fluid" />
@@ -13,34 +44,6 @@
            </div>
            <div class="hotel-website">
              <b-button class="button" href="http://goldenevergreenhotel.com/" target="_blank" variant="primary">Visit Site</b-button>
-           </div>
-         </b-card>
-       </div><!--.card-wrap-->
-       <div class="card-wrap">
-         <b-card>
-           <img slot="img" src="http://www.tablemountaininn.com/photogallery/large/hotel/table-mountain-inn-golden-exterior.jpg" alt="img" class=" card-img-top img-fluid" />
-           <div class="card-text">
-             <h4 class="card-title">Table Mountain Inn</h4>
-             <p>303-277-9898</p>
-             <p>1310 Washington Ave</p>
-             <p>Golden, CO 80401</p>
-           </div>
-           <div class="hotel-website">
-           <b-button class="button" href="http://tablemountaininn.com/" variant="primary" target="_blank">Visit Site</b-button>
-           </div>
-          </b-card>
-       </div><!--.card-wrap-->
-       <div class="card-wrap">
-         <b-card>
-           <img slot="img" src="http://cache.marriott.com/propertyimages/d/denwe/denwe_main01.jpg" alt="img" class=" card-img-top img-fluid" />
-           <div class="card-text">
-            <h4 class="card-title">Denver West Marriott</h4>
-             <p>303-279-9100</p>
-             <p>1717 Denver West Blvd</p>
-             <p>Golden, CO 80401</p>
-           </div>
-           <div class="hotel-website">
-             <b-button class="button" href="http://www.marriott.com/hotels/travel/denwe-denver-marriott-west/" target="_blank" variant="primary">Visit Site</b-button>
            </div>
          </b-card>
        </div><!--.card-wrap-->
