@@ -15,7 +15,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/saveDate'
+      redirect: '/home'
     },
     {
       path: '/home',
