@@ -1,6 +1,6 @@
 <template lang="html">
 <div class="copyRight">
-  <p>&copy; Anu, Michael and Ryan Project 2017</p>
+  <p>&copy; Anu, Michael and Ryan Project 2018</p>
 </div>
 </template>
 
@@ -10,7 +10,7 @@
 <style lang="css">
   .copyRight{
     margin-top: 30px;
-    color: #999999;
+    color: #e0e0e0;
   }
   .copyRight p{
     text-align:center;

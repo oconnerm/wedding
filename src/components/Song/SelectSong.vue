@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app" class="container">
     <div class="panel-heading">
-      <h4>Request a song!</h4>
+      <h4>Request a song! Please be clean about it. </h4>
     </div>
     <div class="panel-body">
       <form id="form" class="form-inline" v-on:submit.prevent="addSong">

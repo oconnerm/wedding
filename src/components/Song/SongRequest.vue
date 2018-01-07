@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="container">
-    <img class="pic" src="../../assets/alaska.png">
     <h1>Song Request</h1>
     <selectSong></selectSong>
   </div>

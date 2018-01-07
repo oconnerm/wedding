@@ -1,69 +1,39 @@
 <template lang="html">
-  <div >
-    <!-- <h3>Engagement Pictures</h3> -->
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-              <img src="../../assets/RB.png" class="pic pic-small">
-          </div>
-          <div class="col-lg-3">
-              <img src="../../assets/RB2.png" class="pic">
-          </div>
-          <div class="col-lg-3">
-              <img src="../../assets/RB3.jpg" class="pic">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3">
-              <img src="../../assets/yes.png" class="pic">
-          </div>
-          <div class="col-lg-3">
-              <img src="../../assets/RB4.jpg" class="pic">
-          </div>
-          <div class="col-lg-6">
-              <img src="../../assets/RB11.png" class="pic">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-              <img src="../../assets/RB5.png" class="pic">
-          </div>
-          <div class="col-lg-6">
-              <img src="../../assets/RB6.jpg" class="pic">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3">
-              <img src="../../assets/RB7.jpg" class="pic">
-          </div>
-          <div class="col-lg-3">
-              <img src="../../assets/RB8.jpg" class="pic">
-          </div>
-          <div class="col-lg-3">
-              <img src="../../assets/RB9.jpg" class="pic">
-          </div>
-          <div class="col-lg-3">
-              <img src="../../assets/RB12.jpg" class="pic">
-          </div>
-        </div>
-    </div>
+  <div>
+    <agile>
+        <div class="slide slide--1"><h3>slide 1</h3></div>
+        <div class="slide slide--2"><h3>slide 2</h3></div>
+        <div class="slide slide--3"><h3>slide 3</h3></div>
+        <div class="slide slide--4"><h3>slide 4</h3></div>
+        <div class="slide slide--5"><h3>slide 5</h3></div>
+        <div class="slide slide--6"><h3>slide 6</h3></div>
+    </agile>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import VueAgile from 'vue-agile'
 
-export default {
-  components: {
-  }
-}
-
+Vue.use(VueAgile)
 </script>
 
-<style lang="css">
-.pic{
-  height: 350px;
-  margin: 5px;
-  max-width: 503px;
+<style>
+.slide {
+    color: #fff;
+    height: 300px;
+    position: relative;
+    &--1 {
+        background-color: #f1c40f;
+    }
+    h3 {
+        font-size: 32px;
+        font-weight: 300;
+        left: 50%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
-
 </style>
