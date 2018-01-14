@@ -1,21 +1,25 @@
 <template lang="html">
   <div class="location-details">
     <h1>Things To Do</h1>
-    <p>1. Blackhawk</p>
-    <p>2. Colorado Mills Mall - 3 Minutes from Marriot Hotels.</p>
-    <p>3. Downtown Denver - 11 Minutes from Marriot Hotels</p>
-    <p>4. Downtown Golden - 5 Minutes from Marriot Hotels</p>
-    <p>5. Estes Park</p>
-    <p>6. Rocky Mountain National Park</p>
-    <p>7. Coors Brewery</p>
-    <p>8. Red Recks Amphitheater - Hiking</p>
-    <p>9. Evergreen</p>
-    <p>10. Rockies Game - Playing the Dodgers 8/9 - 8/12</p>
+
+    <b-list-group>
+      <b-list-group-item href="#">Blackhawk</b-list-group-item>
+      <b-list-group-item href="#">Colorado Mills Mall</b-list-group-item>
+      <b-list-group-item href="#">Downtown Denver</b-list-group-item>
+      <b-list-group-item href="#">Downtown Golden</b-list-group-item>
+      <b-list-group-item href="#">Estes Park</b-list-group-item>
+      <b-list-group-item href="#">Rocky Mountain National Park</b-list-group-item>
+      <b-list-group-item href="#">Coors Brewery</b-list-group-item>
+      <b-list-group-item href="#">Red Recks Amphitheater - Hiking</b-list-group-item>
+      <b-list-group-item href="#">Evergreen</b-list-group-item>
+      <b-list-group-item href="#">Rockies Game - Playing the Dodgers 8/9 - 8/12</b-list-group-item>
+    </b-list-group>
   </div>
 </template>
 
 <script>
 export default {
+  // data
 }
 </script>
 

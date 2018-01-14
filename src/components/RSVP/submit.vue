@@ -6,8 +6,10 @@
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
-
-          <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your code" v-model="guestInput"></b-form-input>
+          <b-alert variant="danger" dismissible :show="showDismissibleAlert" @dismissed="showDismissibleAlert=false">
+            Sorry, could not find your code.
+          </b-alert>
+          <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your guest code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
           <b-btn @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-btn>
         </form>
@@ -160,7 +162,8 @@ export default {
       plus_one: '',
       submitShow: false,
       plus_one_name: '',
-      has_plus_one: ''
+      has_plus_one: '',
+      showDismissibleAlert: false
     }
   },
   computed: {
@@ -181,23 +184,31 @@ export default {
       }
     },
     requestNames () {
-      if (this.submitShow) {
-        this.submitShow = false
-      } else {
-        this.submitShow = true
-      }
       let code = this.guestInput.toLowerCase()
       var self = this
+      if (!code) {
+        self.showDismissibleAlert = true
+        return
+      }
       var codeQuery = Firebase.database().ref('guest_code').child(code)
       codeQuery.once('value').then(function (snapshot) {
-        self.one_name = snapshot.val().one_name
-        self.two_name = snapshot.val().two_name
-        self.three_name = snapshot.val().three_name
-        self.four_name = snapshot.val().four_name
-        self.five_name = snapshot.val().five_name
-        self.guest_count = snapshot.val().guest_count
-        self.plus_one = snapshot.val().plus_one
-        self.query = true
+        if (!snapshot.val()) {
+          self.showDismissibleAlert = true
+        } else {
+          self.one_name = snapshot.val().one_name
+          self.two_name = snapshot.val().two_name
+          self.three_name = snapshot.val().three_name
+          self.four_name = snapshot.val().four_name
+          self.five_name = snapshot.val().five_name
+          self.guest_count = snapshot.val().guest_count
+          self.plus_one = snapshot.val().plus_one
+          self.query = true
+          if (this.submitShow) {
+            this.submitShow = false
+          } else {
+            this.submitShow = true
+          }
+        }
       })
     },
     hide () {
