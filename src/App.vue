@@ -45,4 +45,20 @@ export default {
         max-width:none;
     }
 
+    .button{
+        background-color:#5f1e1a;
+        border-color:#5f1e1a;
+        
+    }
+
+    .button:hover,
+    .button:focus,
+    .button:active{
+        background-color:#fdc666 !important;;
+        border-color:#fdc666 !important;
+        color:#5f1e1a;
+    }
+
+    
+
 </style>

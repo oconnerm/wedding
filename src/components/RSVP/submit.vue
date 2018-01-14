@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <h1>Join Becca and Ryan!</h1>
     <hr>
-    <b-btn v-b-modal.modal1>Find your Invitation</b-btn>
+    <b-btn v-b-modal.modal1 class="button">Find your Invitation</b-btn>
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
@@ -11,7 +11,7 @@
           </b-alert>
           <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your guest code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
-          <b-btn @click="requestNames" type="button" variant="secondary" name="button">Find My Invitation</b-btn>
+          <b-btn @click="requestNames" type="button" variant="secondary" name="button" class="button">Find My Invitation</b-btn>
         </form>
       </div>
       <div v-if='query'>

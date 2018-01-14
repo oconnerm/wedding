@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="app" class="container">
     <h1>Secret Page - The Guest List</h1>
-    <b-btn @click="getGuestsFunc" class="btn" type="button" name="button">Show List</b-btn>
+    <b-btn @click="getGuestsFunc" class="btn button" type="button" name="button">Show List</b-btn>
     <br>
     <div id="col">
       <p>Name</p>
