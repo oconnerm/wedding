@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="app" class="container">
+  <div class="wedding-container">
     <h1>Registry</h1>
     <hr>
     <h3>Coming Soon!</h3>
@@ -12,6 +12,10 @@ export default {
 </script>
 
 <style lang="css">
+div.wedding-container hr{
+    width: 100%;
+    max-width:1100px;
+}
 h3 {
   text-align: center;
 }

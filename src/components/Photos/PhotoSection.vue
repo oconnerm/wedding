@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="wedding-container">
     <h1>Photos</h1>
     <hr>
     <image-viewer :images="imageViewerParams.images"
@@ -88,6 +88,10 @@ export default {
 </script>
 
 <style>
+div.wedding-container hr{
+    width: 100%;
+    max-width:1100px;
+}
 .image-viewer-info {
   display: none !important;
 }
