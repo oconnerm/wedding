@@ -1,11 +1,16 @@
 <template lang="html">
   <div id="app" class="container">
     <h1>Secret Page - The Guest List</h1>
-    <b-btn @click="getGuestsFunc" class="btn" type="button" name="button">Show List</b-btn>
+    <div v-if="isVisible">
+      <b-btn @click="getGuestsFunc" class="btn" type="button" name="button">Show List</b-btn>
+    </div>
+    <div v-if="isntVisible">
+      <h3 style="text-align: center">Total Attending: {{total_attending}}</h3>
+    </div>
     <br>
     <div id="col">
       <p>Name</p>
-      <p>Is Attending?</p>
+      <p>Attending?</p>
     </div>
     <hr>
     <div v-for="item in arr">
@@ -43,11 +48,27 @@ import Firebase from 'Firebase'
 export default {
   data () {
     return {
-      arr: []
+      arr: [],
+      isVisible: true,
+      isntVisible: false,
+      plusOneVisible: false,
+      total_attending: 0
     }
   },
 
   methods: {
+    showListToggle () {
+      if (this.isVisible) {
+        this.isVisible = false
+        this.isntVisible = true
+      } else {
+        this.isVisible = true
+        this.isntVisible = false
+      }
+    },
+    increment () {
+      this.total_attending++
+    },
     getGuestsFunc () {
       var self = this
       var codeQuery = Firebase.database().ref('guest_code')
@@ -60,7 +81,32 @@ export default {
           if (ChildSnapshot.val().three_name !== undefined) {
             self.arr.push(ChildSnapshot.val().three_name)
           }
+          if (ChildSnapshot.val().four_name !== undefined) {
+            self.arr.push(ChildSnapshot.val().four_name)
+          }
+          if (ChildSnapshot.val().five_name !== undefined) {
+            self.arr.push(ChildSnapshot.val().five_name)
+          }
+          if (ChildSnapshot.val().one_attending === true) {
+            self.increment()
+          }
+          if (ChildSnapshot.val().two_attending === true) {
+            self.increment()
+          }
+          if (ChildSnapshot.val().three_attending === true) {
+            self.increment()
+          }
+          if (ChildSnapshot.val().four_attending === true) {
+            self.increment()
+          }
+          if (ChildSnapshot.val().five_attending === true) {
+            self.increment()
+          }
+          if (ChildSnapshot.val().plus_one_name !== undefined) {
+            self.increment()
+          }
         })
+        self.showListToggle()
       })
     }
   },
