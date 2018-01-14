@@ -2,11 +2,7 @@
   <div id="app" class="container">
     <h1>Join Becca and Ryan!</h1>
     <hr>
-<<<<<<< HEAD
     <b-btn v-b-modal.modal1 class="button">Find your Invitation</b-btn>
-=======
-    <b-btn v-b-modal.modal1>Find your reservation</b-btn>
->>>>>>> b1b97f2ef806c27df6b0be21f5dbf7b9934f13b4
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
