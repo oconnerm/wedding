@@ -15,7 +15,7 @@
           </div>
           <div class="nav-button">
             <div class="link-container">
-              <router-link to="wedding">WEDDING</router-link>
+              <router-link to="wedding">WEDDING INFO</router-link>
             </div>
           </div>
           <div class="nav-button">
@@ -68,7 +68,7 @@ export default {
       /*red*/
       color: #5f1e1a;
     }
-    
+
     .header.banner{
         /*background-color:cyan;*/
         width:100%;
@@ -76,9 +76,9 @@ export default {
         text-align:center;
         font-size: 2.25rem;
     }
-    
+
     @media screen and (min-width: 46.875em) {
-        .header.banner{    
+        .header.banner{
             padding: 1rem 0;
             font-size: 2.75rem;
         }
@@ -89,7 +89,7 @@ export default {
         max-width:1100px;
         margin: auto;
         padding: 0;
-        
+
         align-items: center;
         font-family: 'Inconsolata', monospace;
         font-size: 1rem;
@@ -102,22 +102,22 @@ export default {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        
+
         -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     }
-    
+
     .nav-button{
         -webkit-flex: 1 0 33%;
         -ms-flex: 1 0 33%;
         flex: 1 0 33%;
-        
-        
+
+
         align-items: center;
         justify-content: center;
         text-align:center;
-        
+
     }
 
     @media screen and (min-width:50em){
@@ -127,14 +127,14 @@ export default {
             flex: 1 0 16%;
         }
     }
-    
+
     .nav-button a{
         display:block;
         padding:0.5rem 0;
         text-align:center;
         color:#5f1e1a;
     }
-    
+
     .nav-button a:hover,
     .nav-button a:focus,
     .nav-button a:active{

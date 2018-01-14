@@ -6,16 +6,15 @@
         <b-button class="button" href="http://thepinesatgenesee.com/" target="_blank" variant="primary">Visit Site</b-button>
     </div>
     <hr>
-    
     <div class = "googleMap">
-        <app-map></app-map>
+    <app-map></app-map>
     </div>
-
     <hr>
     <app-location></app-location>
-    
     <hr>
     <app-hotel></app-hotel>
+    <hr>
+    <app-todo></app-todo>
   </div>
 </template>
 
@@ -23,11 +22,13 @@
 import mapComponent from './map.vue'
 import locationInfoComponent from './locationInfo.vue'
 import hotelComponent from './hotels.vue'
+import todoComponent from './todo.vue'
 export default {
   components: {
     appMap: mapComponent,
     appLocation: locationInfoComponent,
-    appHotel: hotelComponent
+    appHotel: hotelComponent,
+    appTodo: todoComponent
   }
 }
 </script>
@@ -37,7 +38,7 @@ export default {
         width: 100%;
         max-width:1100px;
     }
-    
+
     @media screen and (min-width:68.75em ){
         div.wedding-container{
             margin:0 auto;
@@ -50,7 +51,7 @@ export default {
         color: #5f1e1a;
         font-weight: 600;
     }
-    
+
     div.wedding-header{
         width: 100%;
         padding: 1rem 0.5rem 2.5rem 0.5rem;
@@ -58,8 +59,6 @@ export default {
         position: relative;
     }
 
-    
-    
     @media screen and (min-width: 31.25em){
         div.wedding-header{
             width: 83%;

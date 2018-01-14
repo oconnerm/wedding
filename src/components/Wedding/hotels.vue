@@ -2,9 +2,40 @@
   <div class="hotels-container">
     <h1>Hotels</h1>
     <div class="card-container">
+
        <div class="card-wrap">
          <b-card>
-           <img slot="img" src="https://media.xogrp.com/images/fd3c05ce-c1ef-4227-b8e6-285e44d959c8" alt="img" class=" card-img-top img-fluid" /> 
+           <img slot="img" src="../../assets/residenceInn.jpg" alt="img" class=" card-img-top img-fluid" />
+           <div class="card-text">
+             <h4 class="card-title">Residence Inn by Marriott </h4>
+             <p>303-271-0909</p>
+             <p>14600 W 6th Ave Frontage Rd</p>
+             <p>Golden, CO 80401</p>
+           </div>
+           <div class="hotel-website">
+           <b-button class="button" href="http://www.marriott.com/hotels/travel/dengo-residence-inn-denver-west-golden/" variant="primary" target="_blank">Visit Site</b-button>
+           </div>
+          </b-card>
+       </div><!--.card-wrap-->
+
+       <div class="card-wrap">
+         <b-card>
+           <img slot="img" src="../../assets/courtyard.jpg" alt="img" class=" card-img-top img-fluid" />
+           <div class="card-text">
+            <h4 class="card-title">Courtyard by Marriott Denver </h4>
+             <p>303-271-0776</p>
+             <p>14700 6th Ave</p>
+             <p>Golden, CO 80401</p>
+           </div>
+           <div class="hotel-website">
+             <b-button class="button" href="http://www.marriott.com/hotels/travel/dengl-courtyard-denver-west-golden/" target="_blank" variant="primary">Visit Site</b-button>
+           </div>
+         </b-card>
+       </div><!--.card-wrap-->
+
+       <div class="card-wrap">
+         <b-card>
+           <img slot="img" src="https://media.xogrp.com/images/fd3c05ce-c1ef-4227-b8e6-285e44d959c8" alt="img" class=" card-img-top img-fluid" />
            <div class="card-text">
              <h4 class="card-title">Evergreen Comfort Suites</h4>
              <p>303-526-2000</p>
@@ -16,36 +47,7 @@
            </div>
          </b-card>
        </div><!--.card-wrap-->
-       <div class="card-wrap">
-         <b-card>
-           <img slot="img" src="http://www.tablemountaininn.com/photogallery/large/hotel/table-mountain-inn-golden-exterior.jpg" alt="img" class=" card-img-top img-fluid" />
-           <div class="card-text">
-             <h4 class="card-title">Table Mountain Inn</h4>
-             <p>303-277-9898</p>
-             <p>1310 Washington Ave</p>
-             <p>Golden, CO 80401</p>
-           </div>
-           <div class="hotel-website">
-           <b-button class="button" href="http://tablemountaininn.com/" variant="primary" target="_blank">Visit Site</b-button>
-           </div>
-          </b-card>
-       </div><!--.card-wrap-->
-       <div class="card-wrap">
-         <b-card>
-           <img slot="img" src="http://cache.marriott.com/propertyimages/d/denwe/denwe_main01.jpg" alt="img" class=" card-img-top img-fluid" />
-           <div class="card-text">
-            <h4 class="card-title">Denver West Marriott</h4>
-             <p>303-279-9100</p>
-             <p>1717 Denver West Blvd</p>
-             <p>Golden, CO 80401</p>
-           </div>
-           <div class="hotel-website">
-             <b-button class="button" href="http://www.marriott.com/hotels/travel/denwe-denver-marriott-west/" target="_blank" variant="primary">Visit Site</b-button>
-           </div>
-         </b-card>
-       </div><!--.card-wrap-->
      </div><!--.card-container-->
-    <hr>
   </div>
 </template>
 
@@ -69,22 +71,22 @@ export default {}
             display: flex;
 
             justify-content: space-between;
-        
+
             -webkit-flex-flow: row;
             -ms-flex-flow: row;
             flex-flow: row;
 
             padding:0 2%;
 
-            
+
         }
     }
-    
+
     .card-wrap{
         /*width:83%;*/
         width: 100%;
         border:none;
-        
+
         margin:0 auto 1rem;
 
         -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
@@ -93,7 +95,7 @@ export default {}
 
     @media screen and (min-width:26.875em){
         .card-wrap{
-           margin:0 auto 2rem; 
+           margin:0 auto 2rem;
         }
     }
 
@@ -105,10 +107,10 @@ export default {}
             -moz-box-shadow: -1px 5px 8px #eee;
             -webkit-box-shadow: -1px 5px 8px #eee;
             box-shadow: -1px 5px 8px #eee;
-            
+
         }
     }
-    
+
      @media screen and (min-width: 50em){
         .card-wrap{
             width: 32%;
@@ -118,7 +120,7 @@ export default {}
 
     @media screen and (min-width:68.75em ){
         .card-wrap{
-            margin:0 auto 2rem; 
+            margin:0 auto 2rem;
         }
     }
 
@@ -136,21 +138,21 @@ export default {}
             left: calc(50% - (92.4531px / 2 ) );
         }
     }
-    
+
 
     .card{
-        width:100%; 
+        width:100%;
         border:none;
         position:static;
     }
-    
-    
+
+
     .card-text{
         width:83%;
         margin:0 auto;
         padding:1rem 0;
     }
-    
+
     @media screen and (min-width: 31.25em){
         .card-text{
             padding:2rem 0;
@@ -162,8 +164,8 @@ export default {}
             padding:2rem 0 5rem 0 ;
         }
     }
-   
-    
+
+
 
     .card-text p{
         margin:0;

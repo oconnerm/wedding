@@ -1,15 +1,15 @@
 <template lang="html">
     <div class=" home-container">
       <div class="content-container">
-        <div class="image-container"> 
+        <div class="image-container">
           <img class="pic" src="../../assets/alaska3_old.png">
         </div>
         <div class="text-content">
-            <div v-if="!isSaveDate" class="saveDateHeading">
-              <h4>Come celebrate our wedding!</h4>
-              <h5>Friday, August 10, 2018</h5>     
+            <div v-if="!isSaveDate" class= "bride-and-groom">
+              <h3>Come celebrate our wedding!</h3>
+              <h3>Friday, August 10, 2018</h3>
             </div>
-            <span v-if="!isSaveDate" class="saveDateHeadingSpacer"></span>
+            <img id="fancyLine" src="../../assets/line_fancy.jpg">
             <div class="saveDateText" v-if="isSaveDate">
               <img class="barley" src='../../assets/barley_down.png'>
               <h2 class="mainText">Save the date!</h2>
@@ -22,7 +22,7 @@
               <h3>&</h3>
               <h3>Ryan O'Connell</h3>
             </div>
-            <span v-if="!isSaveDate" class="saveDateHeadingSpacer"></span>
+            <img id="fancyLine" src="../../assets/line_fancy.jpg">
             <countdown></countdown>
         </div><!--end .text-content-->
       </div>
@@ -45,6 +45,12 @@ export default {
 
 <style lang="css" scoped>
 
+  #fancyLine {
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .home-container{
     max-width:1100px;
   }
@@ -60,7 +66,7 @@ export default {
             margin: 0 auto;
         }
   }
-    
+
   .home-container .image-container {
     text-align:center;
     margin:0;
@@ -71,9 +77,9 @@ export default {
         .home-container .image-container {
             width:80%;
             margin:0 auto;
-            
+
         }
-        
+
   }
 
   @media screen and (min-width: 46.875em) {
@@ -82,8 +88,8 @@ export default {
             margin:0;
         }
   }
-   
-  .home-container .image-container img{ 
+
+  .home-container .image-container img{
         width: 100%;
         height:auto;
         margin:0;
@@ -91,7 +97,7 @@ export default {
   }
 
     @media screen and (min-width: 46.875em) {
-        .home-container .image-container img{ 
+        .home-container .image-container img{
             display:inline-block;
             padding: 0;
             margin:0;
@@ -118,7 +124,7 @@ export default {
     font-size:1.25rem;
     margin:0;
   }
-    
+
   .saveDateHeading h5{
     font-size:1.25rem;
     margin:0;
@@ -129,12 +135,12 @@ export default {
 
         .saveDateHeading h4{
             font-size:1.5rem;
-            
+
         }
 
         .saveDateHeading h5{
             font-size:1.5rem;
-           
+
         }
   }
 
@@ -145,7 +151,7 @@ export default {
   @media screen and (min-width: 62.5em){
         .saveDateHeading{padding: 0 0 3rem 0;}
   }
-  
+
 
 
 
@@ -159,7 +165,7 @@ export default {
   @media screen and (min-width: 31.25em) {
     .saveDateHeadingSpacer{width:50%;}
   }
-  
+
   @media screen and (min-width: 46.875em) {
         .text-content{
             position:absolute;
@@ -172,12 +178,12 @@ export default {
   @media screen and (min-width: 53.125em){
         .text-content{padding-top: 2.5rem;}
   }
-  
+
   @media screen and (min-width: 62.5em){
         .text-content{padding-top: 3rem;}
   }
-  
-  
+
+
 
   .saveDateText{
     margin-top: 30px;
@@ -186,7 +192,7 @@ export default {
     color: #5f1e1a;
     font-weight: bold;
   }
-  
+
   @media screen and (min-width: 31.25em) {
           .saveDateText{
                 margin:0;
@@ -231,7 +237,7 @@ export default {
         padding: 1.75rem 0;
     }
   }
-    
+
   #date{
     font-weight: bold;
     font-size: 3.5rem;
@@ -239,5 +245,5 @@ export default {
     margin:0 auto 0.5rem;
     color: #112339;
   }
-  
+
 </style>
