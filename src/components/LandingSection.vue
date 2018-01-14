@@ -24,10 +24,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-    .masthead{
-        margin:0 auto;
-        width:100%;
-        padding:0;
-    }
-
+p {
+  text-align: center;
+}
+h1 {
+  margin: 30px;
+  font-family: 'Oregano', cursive;
+  color: #5f1e1a;
+  font-weight: bold;
+  text-align: center;
+}
+.masthead{
+  margin:0 auto;
+  width:100%;
+  padding:0;
+}
 </style>

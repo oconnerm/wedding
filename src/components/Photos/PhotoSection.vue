@@ -1,6 +1,7 @@
 <template lang="html">
   <div>
     <h1>Photos</h1>
+    <hr>
     <image-viewer :images="imageViewerParams.images"
                   :index="imageViewerParams.index"
                   :visible="imageViewerParams.visible"
@@ -87,11 +88,15 @@ export default {
 </script>
 
 <style>
+p {
+  text-align: center;
+}
 h1 {
   margin: 30px;
   font-family: 'Oregano', cursive;
   color: #5f1e1a;
   font-weight: bold;
+  text-align: center;
 }
 .image-viewer-info {
   display: none !important;
