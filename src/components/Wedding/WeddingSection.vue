@@ -53,24 +53,17 @@ export default {
     
     div.wedding-header{
         width: 100%;
-        padding: 1rem 0.5rem 4rem 0.5rem;
-        
+        padding: 1rem 0.5rem 2.5rem 0.5rem;
+        text-align:center;
         position: relative;
     }
 
-    @media screen and (min-width:26.875em){
-        div.wedding-header{
-            padding: 1rem 1rem 0 1rem;
-
-        }
-    }
+    
     
     @media screen and (min-width: 31.25em){
         div.wedding-header{
-            padding: 1rem 0 0;
             width: 83%;
             margin:0 auto;
-
         }
     }
 
@@ -81,21 +74,11 @@ export default {
 
     div.wedding-header a{
         position:absolute;
-        right:0.5rem;
+        left: calc(50% - 46.2265px);
         bottom: 0;
-        -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
-        transition:all 0.25s ease-out;
+     
     }
-    @media screen and (min-width:26.875em){
-        div.wedding-header a{
-            bottom: calc(100% - 38px - 2rem);
-        }
-    }
-     @media screen and (min-width: 31.25em){
-         div.wedding-header a{
-            right:0;
-        }
-    }
+    
 
     div.googleMap{
         width:100%;
