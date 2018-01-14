@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <h1>Registry</h1>
     <hr>
-    <h3>Coming Soon!</h3>
+    <h3>Coming Soon!!</h3>
   </div>
 </template>
 
