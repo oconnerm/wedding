@@ -2,12 +2,16 @@
   <div id="app" class="container">
     <h1>Join Becca and Ryan!</h1>
     <hr>
+<<<<<<< HEAD
     <b-btn v-b-modal.modal1 class="button">Find your Invitation</b-btn>
+=======
+    <b-btn v-b-modal.modal1>Find your reservation</b-btn>
+>>>>>>> b1b97f2ef806c27df6b0be21f5dbf7b9934f13b4
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
           <b-alert variant="danger" dismissible :show="showDismissibleAlert" @dismissed="showDismissibleAlert=false">
-            Sorry, could not find your code.
+            Sorry, could not find your code. Please check your Invitaion.
           </b-alert>
           <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your guest code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
@@ -26,7 +30,7 @@
           <img src="../../../src/assets/happy.png" />
         </div>
         <div v-else>
-          <h5>{{one_name}} will <span id="not">not</span> attending.</h5>
+          <h5>{{one_name}} will <span id="not">not be</span> attending.</h5>
           <img src="../../../src/assets/sad.png" />
         </div>
       </div>
@@ -44,7 +48,7 @@
             <img src="../../../src/assets/happy.png" />
           </div>
           <div v-else>
-            <h5>{{two_name}} will <span id="not">not</span> attending.</h5>
+            <h5>{{two_name}} will <span id="not">not be</span> attending.</h5>
             <img src="../../../src/assets/sad.png" />
           </div>
         </div>
@@ -62,7 +66,7 @@
             <img src="../../../src/assets/happy.png" />
           </div>
           <div v-else>
-            <h5>{{three_name}} will <span id="not">not</span> attending.</h5>
+            <h5>{{three_name}} will <span id="not">not be</span> attending.</h5>
             <img src="../../../src/assets/sad.png" />
           </div>
         </div>
@@ -80,7 +84,7 @@
             <img src="../../../src/assets/happy.png" />
           </div>
           <div v-else>
-            <h5>{{four_name}} will <span id="not">not</span> attending.</h5>
+            <h5>{{four_name}} will <span id="not">not be</span> attending.</h5>
             <img src="../../../src/assets/sad.png" />
           </div>
         </div>
@@ -98,7 +102,7 @@
           <img src="../../../src/assets/happy.png" />
         </div>
         <div v-else>
-          <h5>{{five_name}} will <span id="not">not</span> attending.</h5>
+          <h5>{{five_name}} will <span id="not">not be</span> attending.</h5>
           <img src="../../../src/assets/sad.png" />
         </div>
       </div>
@@ -126,6 +130,9 @@
         </div>
       </div>
     </b-modal>
+    <b-alert class="alert" show variant="success" dismissible :show="showSuccessAlert" @dismissed="showSuccessAlert=false">
+        {{successSentence}} Before you go, click<a href="#" class="alert-link"> here to request songs!</a>
+    </b-alert>
   </div>
 </template>
 
@@ -145,6 +152,7 @@ Firebase.initializeApp(config)
 export default {
   data () {
     return {
+      attendingArr: [],
       guest: '',
       guestInput: '',
       query: false,
@@ -163,7 +171,8 @@ export default {
       submitShow: false,
       plus_one_name: '',
       has_plus_one: '',
-      showDismissibleAlert: false
+      showDismissibleAlert: false,
+      showSuccessAlert: false
     }
   },
   computed: {
@@ -173,6 +182,20 @@ export default {
         val = true
       }
       return val
+    },
+    successSentence () {
+      let final
+      let arrLength = this.attendingArr.length
+      if (arrLength >= 2) {
+        console.log(arrLength)
+        const lastElement = this.attendingArr[arrLength - 1]
+        this.attendingArr.splice((arrLength - 1), 1)
+        console.log(this.attendingArr)
+        let middle = this.attendingArr.join(', ')
+        let end = `, and ${lastElement}`
+        final = `${middle} ${end}`
+      }
+      return `Thank you! We'll see ${final} at the wedding.`
     }
   },
   methods: {
@@ -203,11 +226,7 @@ export default {
           self.guest_count = snapshot.val().guest_count
           self.plus_one = snapshot.val().plus_one
           self.query = true
-          if (this.submitShow) {
-            this.submitShow = false
-          } else {
-            this.submitShow = true
-          }
+          self.submitToggle()
         }
       })
     },
@@ -243,7 +262,25 @@ export default {
         codeQuery.update({
           'plus_one_name': this.plus_one_name
         })
+        this.attendingArr.push(this.plus_one_name)
       }
+      if (this.one_attending) {
+        this.attendingArr.push(this.one_name)
+      }
+      if (this.two_attending) {
+        this.attendingArr.push(this.two_name)
+      }
+      if (this.three_attending) {
+        this.attendingArr.push(this.three_name)
+      }
+      if (this.four_attending) {
+        this.attendingArr.push(this.four_name)
+      }
+      if (this.five_attending) {
+        this.attendingArr.push(this.five_name)
+      }
+      this.showSuccessAlert = true
+      // this.submitToggle()
       this.$refs.my_modal.hide()
     }
   },
@@ -282,6 +319,9 @@ img {
     display: block;
     margin: auto;
     margin-bottom: 50px;
+}
+.alert {
+  margin: 15px;
 }
 .barley{
     width: 600px;

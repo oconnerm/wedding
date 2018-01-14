@@ -1,5 +1,8 @@
 <template lang="html">
   <div class="wedding-container">
+    <h1>Information</h1>
+    <app-location></app-location>
+    <hr>
     <div class = "wedding-header">
         <h1>The Pines at Genesee</h1>
         <p>633 Park Point Dr, Golden, CO 80401</p>
@@ -9,8 +12,6 @@
     <div class = "googleMap">
     <app-map></app-map>
     </div>
-    <hr>
-    <app-location></app-location>
     <hr>
     <app-hotel></app-hotel>
     <hr>
@@ -75,9 +76,9 @@ export default {
         position:absolute;
         left: calc(50% - 46.2265px);
         bottom: 0;
-     
+
     }
-    
+
 
     div.googleMap{
         width:100%;
