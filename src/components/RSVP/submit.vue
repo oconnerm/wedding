@@ -7,7 +7,7 @@
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
           <b-alert variant="danger" dismissible :show="showDismissibleAlert" @dismissed="showDismissibleAlert=false">
-            Sorry, could not find your code.
+            Sorry, could not find your code. Please check your Invitaion.
           </b-alert>
           <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your guest code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
@@ -126,8 +126,8 @@
         </div>
       </div>
     </b-modal>
-    <b-alert show variant="success" dismissible :show="showSuccessAlert" @dismissed="showSuccessAlert=false">
-        {{successSentence}} Next click<a href="#" class="alert-link"> here to request some songs!</a>
+    <b-alert class="alert" show variant="success" dismissible :show="showSuccessAlert" @dismissed="showSuccessAlert=false">
+        {{successSentence}} Before you go, click<a href="#" class="alert-link"> here to request songs!</a>
     </b-alert>
   </div>
 </template>
@@ -191,7 +191,7 @@ export default {
         let end = `, and ${lastElement}`
         final = `${middle} ${end}`
       }
-      return `Thank you! Can't wait to see ${final} at the wedding.`
+      return `Thank you! We'll see ${final} at the wedding.`
     }
   },
   methods: {
@@ -315,6 +315,9 @@ img {
     display: block;
     margin: auto;
     margin-bottom: 50px;
+}
+.alert {
+  margin: 15px;
 }
 .barley{
     width: 600px;
