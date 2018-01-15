@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <h1>Join Becca and Ryan!</h1>
     <hr>
-    <b-btn v-b-modal.modal1 class="button">Find your Invitation</b-btn>
+    <b-btn v-b-modal.modal1 class="button" @click="clearArray">Find your Invitation</b-btn>
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
@@ -127,7 +127,7 @@
       </div>
     </b-modal>
     <b-alert class="alert" show variant="success" dismissible :show="showSuccessAlert" @dismissed="showSuccessAlert=false">
-        {{successSentence}} Before you go, click<a href="javascript:void(0)" @click='songLink' class="alert-link"> here to request songs!</a>
+        {{successSentence}} Before you go, click <a href="javascript:void(0)" @click='songLink' class="alert-link"> here</a> to request songs!
     </b-alert>
   </div>
 </template>
@@ -181,15 +181,15 @@ export default {
     },
     successSentence () {
       let sentence = 'Thank you for letting us know!'
-      if (this.attendingArr > 0) {
+      let arrLength = this.attendingArr.length
+      if (arrLength > 0) {
         let final = `${this.attendingArr[0]}`
-        let arrLength = this.attendingArr.length
         if (arrLength >= 3) {
           const lastElement = this.attendingArr[arrLength - 1]
           this.attendingArr.splice((arrLength - 1), 1)
           let middle = this.attendingArr.join(', ')
           let end = `, and ${lastElement}`
-          final = `${middle}${end}`
+          final = `${middle} ${end}`
         } else if (arrLength === 2) {
           final = `${this.attendingArr[0]} and ${this.attendingArr[1]}`
         }
@@ -199,6 +199,9 @@ export default {
     }
   },
   methods: {
+    clearArray () {
+      this.attendingArr = []
+    },
     submitToggle () {
       if (this.submitShow) {
         this.submitShow = false
