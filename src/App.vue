@@ -27,13 +27,13 @@ export default {
         overflow-x:hidden;
     }
     body{
-        width:100%;     
+        width:100%;
     }
     .main {
       text-align: center;
       font-size:16px;
     }
-    
+
     .container{
         max-width:100%;
     }
@@ -48,7 +48,7 @@ export default {
     .button{
         background-color:#5f1e1a;
         border-color:#5f1e1a;
-        
+        color: #FDC667;
     }
 
     .button:hover,
@@ -59,6 +59,6 @@ export default {
         color:#5f1e1a;
     }
 
-    
+
 
 </style>
