@@ -1,8 +1,12 @@
 <template lang="html">
   <div class="hotels-container">
     <h1>Hotels</h1>
+    <p>You will find the information for your Marriot online group rate reservation at the link below. If you need to reserve a two bedroom, two bath room at the Ressidence Inn, or if you have any questions or need help with the link, please contact Katie Borrego (303-215-9218).</p>
+    <p><i>In addition...</i><p>
+    <p>There will be a shuttle from the Marriot Courtyard and Ressidence Inn to the wedding at the Pines at Genesee.</p>
+    <p>Out of town guests are invited to the rehersal dinner. If you plan to attend the rehersal dinner please RSVP here.</p>
+    <br>
     <div class="card-container">
-
        <div class="card-wrap">
          <b-card>
            <img slot="img" src="../../assets/residenceInn.jpg" alt="img" class=" card-img-top img-fluid" />
@@ -13,7 +17,7 @@
              <p>Golden, CO 80401</p>
            </div>
            <div class="hotel-website">
-           <b-button class="button" href="http://www.marriott.com/hotels/travel/dengo-residence-inn-denver-west-golden/" variant="primary" target="_blank">Visit Site</b-button>
+             <b-button class="button" href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=OConnell%20Aragon%20Wedding%20%5EDengo%60CAWCAWS%7CCAWCAWO%60164.00%60USD%60false%604%60;dengl%60CAWCAWG%7CCAWCAWD%60154.00%60USD%60false%604%608/9/18%608/11/18%607/10/18&app=resvlink&stop_mobi=yes" variant="primary" target="_blank">Discounted Rate</b-button>
            </div>
           </b-card>
        </div><!--.card-wrap-->
@@ -28,26 +32,27 @@
              <p>Golden, CO 80401</p>
            </div>
            <div class="hotel-website">
-             <b-button class="button" href="http://www.marriott.com/hotels/travel/dengl-courtyard-denver-west-golden/" target="_blank" variant="primary">Visit Site</b-button>
-           </div>
-         </b-card>
-       </div><!--.card-wrap-->
-
-       <div class="card-wrap">
-         <b-card>
-           <img slot="img" src="https://media.xogrp.com/images/fd3c05ce-c1ef-4227-b8e6-285e44d959c8" alt="img" class=" card-img-top img-fluid" />
-           <div class="card-text">
-             <h4 class="card-title">Evergreen Comfort Suites</h4>
-             <p>303-526-2000</p>
-             <p>29300 U.S Highway 40</p>
-             <p>Evergreen, CO 80439</p>
-           </div>
-           <div class="hotel-website">
-             <b-button class="button" href="http://goldenevergreenhotel.com/" target="_blank" variant="primary">Visit Site</b-button>
+             <b-button class="button" href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=OConnell%20Aragon%20Wedding%20%5EDengo%60CAWCAWS%7CCAWCAWO%60164.00%60USD%60false%604%60;dengl%60CAWCAWG%7CCAWCAWD%60154.00%60USD%60false%604%608/9/18%608/11/18%607/10/18&app=resvlink&stop_mobi=yes" target="_blank" variant="primary">Discounted Rate</b-button>
            </div>
          </b-card>
        </div><!--.card-wrap-->
      </div><!--.card-container-->
+     <p>Rick and Diane will be staying at the Residence Inn August 9th, 10th and 11th.</p>
+     <p>Steve and Pita will be staying at... pending.</p>
+     <h1>Additional Hotels</h1>
+     <p>Here are some great hotels ff you'd like to stay in Loiusville or Arvada after the wedding.</p>
+     <h3>Louisville</h3>
+     <h4>(These are within a mile of the O'Connell house)</h4>
+     <h4>Courtyard by Marriot - Louisville/Boulder</h4>
+     <p>948 West Dillon Road, Louisville, CO 80027 US</p>
+     <p>Reservation Counter Call Center: 844-232-0912</p>
+     <h4>Best Western Plus Louisville Inn & Suites</h4>
+     <p>960 West Dillion Road, Louisville, CO 80027</p>
+     <p>Reservations: 303-327-1215</p>
+     <h4>La Quinta Inn & Suites Denver Boulder - Louisville</h4>
+     <p>902 West Dillion Road, Louisville, CO 80027</p>
+     <p>Reservations: 303-664-0100</p>
+     <p>Arvada</p>
   </div>
 </template>
 

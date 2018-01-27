@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="location-details">
-    <p>The wedding will be held on Friday, August 10, 2018 at the Pines at Genesee in Golden, Colorado. We'll start at the Evergreen Wedding Terrace for the ceremony, then move to the ballroom for the reception.</p>
-    <p>Ceremoney: 5:00pm - 6:00pm</p>
-    <p>Reception: 7:00pm - 12:00pm</p>
+    <p>The wedding will be held on Friday, August 10, 2018 at the Pines at Genesee in Golden, Colorado. We'll start at the Evergreen Wedding Terrace for the outdoor ceremony. A reception will follow in the ballroom including dinner, dancing and <i>free</i> beer.</p>
+    <p>Ceremoney: 6:00pm - 7:00pm</p>
+    <p>Reception: 7:00pm - 12:00am</p>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
 
 <style lang="css">
   div.location-details{
-        padding:1.5rem;
+        padding:1rem;
   }
 
   @media screen and (min-width: 31.25em){
