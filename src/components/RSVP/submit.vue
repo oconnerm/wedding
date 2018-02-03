@@ -9,7 +9,7 @@
           <b-alert variant="danger" dismissible :show="showDismissibleAlert" @dismissed="showDismissibleAlert=false">
             Sorry, could not find your code. Please check your Invitaion.
           </b-alert>
-          <b-form-input style="width: 300px; margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your guest code" v-model="guestInput"></b-form-input>
+          <b-form-input style="margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your guest code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
           <b-btn @click="requestNames" type="button" variant="secondary" name="button" class="button">Find My Invitation</b-btn>
         </form>
@@ -318,7 +318,6 @@ body{
   font-family: 'Oregano', cursive;
 }
 button{
-  font-family: 'Oregano', cursive;
   border-radius: 4px;
 }
 img {
@@ -330,10 +329,16 @@ img {
   margin: 15px;
 }
 .barley{
-    width: 600px;
-    height: 50px;
+    width: 50vw;
+    height: 5vw;
 }
 .submit{
   margin-top: 20px;
+}
+.btn-secondary{
+  color: #eeee;
+}
+.btn-secondary:hover{
+    color: #5f1e1a;
 }
 </style>
