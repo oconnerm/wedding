@@ -1,49 +1,80 @@
 <template lang="html">
-  <div class="">
-    <hr>
+  <div class="wedding-container">
     <h2>Maids of Honor</h2>
-    <p><img src="../../assets/rachel.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Rachel Aragon</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/ramona.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Ramona Aragon</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <hr>
-    <h2>Bridesmaids</h2>
-    <p><img src="../../assets/mat.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Mat Aragon</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/stephanie.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Stephanie Aragon</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/chelsea.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Chelsea Baker</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/dana.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Dana Miller</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/brittany.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Brittany Sheehan</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/ryan.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Ryan Thomas</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+      <div class="card-container">
+        <div class="card-wrap">
+          <p><img src="../../assets/rachel.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Rachel Aragon</p>
+        </div>
+        <div class="card-wrap">
+          <p><img src="../../assets/ramona.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Ramona Aragon</p>
+        </div>
+      </div>
+      <hr>
+      <h2>Bridesmaids</h2>
+      <div class="card-container">
+         <div class="card-wrap">
+          <p><img src="../../assets/mat.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Mat Aragon</p>
+          <p><img src="../../assets/stephanie.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Stephanie Aragon</p>
+        </div>
+        <div class="card-wrap">
+          <p><img src="../../assets/chelsea.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Chelsea Baker</p>
+          <p><img src="../../assets/dana.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Dana Miller</p>
+        </div>
+        <div class="card-wrap">
+          <p><img src="../../assets/brittany.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Brittany Sheehan</p>
+          <p><img src="../../assets/ryan.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <p>Ryan Thomas</p>
+        </div>
+      </div>
     <hr>
     <h2>Best Men</h2>
-    <p><img src="../../assets/kyle.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Kyle O'Connell</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/anu.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Anu Shrestha</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+    <div class="card-container">
+      <div class="card-wrap">
+        <p><img src="../../assets/kyle.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>Kyle O'Connell</p>
+    </div>
+    <div class="card-wrap">
+        <p><img src="../../assets/anu.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>Anu Shrestha</p>
+        </div>
+      </div>
     <hr>
     <h2>Groomsmen</h2>
-    <p><img src="../../assets/steve.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Steve Aragon</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/michael.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Michael Christman</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/henson.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Kyle Henson</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/dj.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>DJ Molinare</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/david.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>David Morris</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
-    <p><img src="../../assets/eric.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>Eric Ramon</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+    <div class="card-container">
+      <div class="card-wrap">
+        <p><img src="../../assets/steve.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>Steve Aragon</p>
+        <p><img src="../../assets/michael.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>Michael Christman</p>
+      </div>
+      <div class="card-wrap">
+        <p><img src="../../assets/henson.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>Kyle Henson</p>
+        <p><img src="../../assets/dj.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>DJ Molinare</p>
+      </div>
+      <div class="card-wrap">
+        <p><img src="../../assets/david.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>David Morris</p>
+        <p><img src="../../assets/eric.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>Eric Ramon</p>
+      </div>
+    </div>
     <hr>
     <h2>Officiant</h2>
-    <p><img src="../../assets/john.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
-    <b>John Honn</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+    <div class="card-container">
+      <div class="card-wrap">
+        <p><img src="../../assets/john.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <p>John Honn</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,26 +84,129 @@ export default {
 </script>
 
 <style lang="css" scoped>
-p{
-  text-align: left;
-}
-b {
-  font-family: 'Oregano', cursive;
-  font-size: 20px;
-  color: #5f1e1a;
-  font-weight: bold;
-}
-h2 {
-  margin: 30px;
-  font-family: 'Oregano', cursive;
-  color: #5f1e1a;
-  font-weight: bold;
-}
-#fancyLine {
+div.wedding-container hr{
   width: 100%;
-  margin-top: 30px;
+  max-width:1400px;
 }
-#weddingParty {
-  float: left;
+div.wedding-container {
+  width: 100%;
+  padding: 1rem 0.5rem 2.5rem 0.5rem;
+  text-align:center;
+  position: relative;
 }
+div.wedding-container h2{
+    text-align:center;
+    margin:0 auto 1rem;
+    font-family: 'Oregano', cursive;
+    color: #5f1e1a;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 50em){
+    .card-container{
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        justify-content: space-between;
+
+        -webkit-flex-flow: row;
+        -ms-flex-flow: row;
+        flex-flow: row;
+
+        padding:0 2%;
+
+
+    }
+}
+
+.card-wrap{
+    /*width:83%;*/
+    width: 100%;
+    border:none;
+
+    margin:0 auto 1rem;
+
+    -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
+    transition:all 0.25s ease-out;
+}
+
+@media screen and (min-width:26.875em){
+    .card-wrap{
+       margin:0 auto 2rem;
+    }
+}
+
+@media screen and (min-width: 31.25em){
+    .card-wrap{
+        width:83%;
+        margin:0 auto 8.5vw;
+
+        -moz-box-shadow: -1px 5px 8px #eee;
+        -webkit-box-shadow: -1px 5px 8px #eee;
+        box-shadow: -1px 5px 8px #eee;
+
+    }
+}
+
+ @media screen and (min-width: 50em){
+    .card-wrap{
+        width: 32%;
+        position:relative;
+    }
+ }
+
+@media screen and (min-width:68.75em ){
+    .card-wrap{
+        margin:0 auto 2rem;
+    }
+}
+
+
+
+.card-wrap .hotel-website{
+    text-align:center;
+    margin-bottom:1rem;
+}
+
+@media screen and (min-width:50em){
+    .card-wrap .hotel-website{
+        position:absolute;
+        bottom:0.75rem;
+        left: calc(50% - (92.4531px / 2 ) );
+    }
+}
+
+
+.card{
+    width:100%;
+    border:none;
+    position:static;
+}
+
+
+.card-text{
+    width:83%;
+    margin:0 auto;
+    padding:1rem 0;
+}
+
+@media screen and (min-width: 31.25em){
+    .card-text{
+        padding:2rem 0;
+    }
+}
+
+@media screen and (min-width: 50em){
+    .card-text{
+        padding:2rem 0 5rem 0 ;
+    }
+}
+
+
+
+.card-text p{
+    margin:0;
+}
+
 </style>

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="wedding-container">
-    <h1>Information</h1>
+    <h1>Wedding Information</h1>
     <app-location></app-location>
     <hr>
     <div class = "wedding-header">

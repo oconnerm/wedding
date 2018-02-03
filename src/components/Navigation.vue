@@ -91,11 +91,11 @@ export default {
         padding: 0;
 
         align-items: center;
-        font-family: 'Inconsolata', monospace;
-        font-size: 1rem;
+        font-family: 'Open Sans', monospace;
+        font-size: 0.9rem;
 
-        border-top:5px solid #5f1e1a;
-        border-bottom:5px solid #5f1e1a;
+        border-top:2px solid #5f1e1a;
+        border-bottom:2px solid #5f1e1a;
     }
 
     .nav-div>div{
