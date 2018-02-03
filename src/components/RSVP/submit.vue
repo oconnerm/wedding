@@ -336,7 +336,7 @@ img {
   margin-top: 20px;
 }
 .btn-secondary{
-  color: #eeee;
+  color: #fff;
 }
 .btn-secondary:hover{
     color: #5f1e1a;
