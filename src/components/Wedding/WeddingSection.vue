@@ -52,6 +52,10 @@ export default {
         color: #5f1e1a;
         font-weight: 600;
     }
+    p{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 
     div.wedding-header{
         width: 100%;
@@ -78,7 +82,6 @@ export default {
         bottom: 0;
 
     }
-
 
     div.googleMap{
         width:100%;
