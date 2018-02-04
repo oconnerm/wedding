@@ -18,7 +18,7 @@ export default {
 
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 div.wedding-container hr{
   width: 100%;
   max-width:1100px;
