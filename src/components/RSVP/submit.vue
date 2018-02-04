@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="app" class="wedding-container">
-    <p>On your invitation there will be a 4 digit code. Type your code with the link below to find your invitation. Invitations will be sent a few months before the wedding. Any issues contact Ryan. </p>
+    <p>On your invitation there will be a 4 digit code. Type your code with the link below to find your invitation. Invitations will be sent a few months before the wedding </p>
     <b-btn v-b-modal.modal1 class="button" @click="clearArray">Find your Invitation</b-btn>
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
@@ -121,7 +121,7 @@
       </div>
       <div v-if="submitShow">
         <div class="submit">
-            <b-btn class="float-right" @click.prevent="sendRsvp" name="button">Submit</b-btn>
+            <b-btn class="float-right" id="sbumit-button" @click.prevent="sendRsvp" name="button">Submit</b-btn>
         </div>
       </div>
     </b-modal>
@@ -345,8 +345,8 @@ div.wedding-container hr{
   max-width:1100px;
 }
 div.wedding-container p{
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin-left: 220px;
+  margin-right: 220px;
 }
 div.wedding-container {
   width: 100%;
@@ -354,4 +354,15 @@ div.wedding-container {
   text-align:center;
   position: relative;
 }
+#sbumit-button{
+  background-color: #5f1e1a;
+  color: #fff;
+}
+#sbumit-button:hover{
+  background-color: #fdc666;
+  color: #5f1e1a;
+}
+/* .float-right .btn .btn-secondary{
+  color: #5f1e1a;
+} */
 </style>

@@ -3,11 +3,15 @@
     <h2>Maids of Honor</h2>
       <div class="card-container">
         <div class="card-wrap">
-          <p><img src="../../assets/rachel.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/rachel.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+          </span>
           <p>Rachel Aragon</p>
         </div>
         <div class="card-wrap">
-          <p><img src="../../assets/ramona.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/ramona.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+          </span>
           <p>Ramona Aragon</p>
         </div>
       </div>
@@ -15,21 +19,32 @@
       <h2>Bridesmaids</h2>
       <div class="card-container">
          <div class="card-wrap">
-          <p><img src="../../assets/mat.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/mat.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+          </span>
           <p>Mat Aragon</p>
-          <p><img src="../../assets/stephanie.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/stephanie.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+          </span>
           <p>Stephanie Aragon</p>
         </div>
         <div class="card-wrap">
-          <p><img src="../../assets/chelsea.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/chelsea.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+          </span>
           <p>Chelsea Baker</p>
-          <p><img src="../../assets/dana.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/dana.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+          </span>
           <p>Dana Miller</p>
         </div>
         <div class="card-wrap">
-          <p><img src="../../assets/brittany.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/brittany.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+          </span>
           <p>Brittany Sheehan</p>
-          <p><img src="../../assets/ryan.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+          <span>
+            <img src="../../assets/ryan.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></span>
           <p>Ryan Thomas</p>
         </div>
       </div>
@@ -37,11 +52,15 @@
     <h2>Best Men</h2>
     <div class="card-container">
       <div class="card-wrap">
-        <p><img src="../../assets/kyle.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <span>
+          <img src="../../assets/kyle.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+        </span>
         <p>Kyle O'Connell</p>
     </div>
     <div class="card-wrap">
-        <p><img src="../../assets/anu.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <span>
+          <img src="../../assets/anu.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+        </span>
         <p>Anu Shrestha</p>
         </div>
       </div>
@@ -49,21 +68,29 @@
     <h2>Groomsmen</h2>
     <div class="card-container">
       <div class="card-wrap">
-        <p><img src="../../assets/steve.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <span>
+          <img src="../../assets/steve.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+        </span>
         <p>Steve Aragon</p>
-        <p><img src="../../assets/michael.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <span>
+          <img src="../../assets/michael.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+        </span>
         <p>Michael Christman</p>
       </div>
       <div class="card-wrap">
-        <p><img src="../../assets/henson.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <span>
+          <img src="../../assets/henson.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+        </span>
         <p>Kyle Henson</p>
-        <p><img src="../../assets/dj.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <span>
+          <img src="../../assets/dj.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
+        </span>
         <p>DJ Molinare</p>
       </div>
       <div class="card-wrap">
-        <p><img src="../../assets/david.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <img src="../../assets/david.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
         <p>David Morris</p>
-        <p><img src="../../assets/eric.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <img src="../../assets/eric.jpg" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
         <p>Eric Ramon</p>
       </div>
     </div>
@@ -71,7 +98,7 @@
     <h2>Officiant</h2>
     <div class="card-container">
       <div class="card-wrap">
-        <p><img src="../../assets/john.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;"></p>
+        <img src="../../assets/john.png" id="weddingParty" style="width:170px;height:170px;margin-right:15px;">
         <p>John Honn</p>
       </div>
     </div>
@@ -84,17 +111,32 @@ export default {
 </script>
 
 <style lang="css" scoped>
-div.wedding-container hr{
+p{
+  margin-bottom: 25px;
+}
+.card{
+    width:100%;
+    border:none;
+    position:static;
+}
+
+.card-text{
+    width:83%;
+    margin:0 auto;
+    padding:1rem 0;
+}
+
+.wedding-container hr{
   width: 100%;
   max-width:1400px;
 }
-div.wedding-container {
+.wedding-container {
   width: 100%;
   padding: 1rem 0.5rem 2.5rem 0.5rem;
   text-align:center;
   position: relative;
 }
-div.wedding-container h2{
+.wedding-container h2{
     text-align:center;
     margin:0 auto 1rem;
     font-family: 'Oregano', cursive;
@@ -124,7 +166,7 @@ div.wedding-container h2{
     /*width:83%;*/
     width: 100%;
     border:none;
-
+    padding-top: 20px;
     margin:0 auto 1rem;
 
     -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
@@ -177,20 +219,6 @@ div.wedding-container h2{
     }
 }
 
-
-.card{
-    width:100%;
-    border:none;
-    position:static;
-}
-
-
-.card-text{
-    width:83%;
-    margin:0 auto;
-    padding:1rem 0;
-}
-
 @media screen and (min-width: 31.25em){
     .card-text{
         padding:2rem 0;
@@ -202,8 +230,6 @@ div.wedding-container h2{
         padding:2rem 0 5rem 0 ;
     }
 }
-
-
 
 .card-text p{
     margin:0;
