@@ -37,7 +37,7 @@
          </b-card>
        </div><!--.card-wrap-->
      </div><!--.card-container-->
-     <p>Rick and Diane will be staying at the Residence Inn August 9th, 10th and 11th.</p>
+     <p>Rick and Diane will be staying at the Residence Inn August 9th and 10th.</p>
      <p>Steve and Pita will be staying at... pending.</p>
      <h1>Additional Hotels</h1>
      <p>Here are some great hotels if you'd like to stay in Loiusville after the wedding.</p>
