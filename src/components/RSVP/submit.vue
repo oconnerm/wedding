@@ -1,13 +1,12 @@
 <template lang="html">
-  <div id="app" class="container">
-    <h1>Join Becca and Ryan!</h1>
-    <hr>
+  <div id="app" class="wedding-container">
+    <p>On your invitation there will be a 4 digit code. Type your code with the link below to find your invitation. Invitations will be sent a few months before the wedding </p>
     <b-btn v-b-modal.modal1 class="button" @click="clearArray">Find your Invitation</b-btn>
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
         <form @submit.stop.prevent="requestNames">
           <b-alert variant="danger" dismissible :show="showDismissibleAlert" @dismissed="showDismissibleAlert=false">
-            Sorry, could not find your code. Please check your Invitaion.
+            Sorry, could not find your code. Please check your Invitation.
           </b-alert>
           <b-form-input style="margin: auto; margin-bottom: 20px;" type="text" placeholder="Enter your guest code" v-model="guestInput"></b-form-input>
           <!-- <br> -->
@@ -336,9 +335,23 @@ img {
   margin-top: 20px;
 }
 .btn-secondary{
-  color: #eeee;
+  color: #ffff;
 }
 .btn-secondary:hover{
     color: #5f1e1a;
+}
+div.wedding-container hr{
+  width: 100%;
+  max-width:1100px;
+}
+div.wedding-container p{
+  margin-left: 220px;
+  margin-right: 220px;
+}
+div.wedding-container {
+  width: 100%;
+  padding: 1rem 0.5rem 2.5rem 0.5rem;
+  text-align:center;
+  position: relative;
 }
 </style>

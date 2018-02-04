@@ -1,64 +1,19 @@
 <template lang="html">
-  <div id="app" class="container">
-    <div class="panel-heading">
-      <h4>Request a song! Please be clean about it. </h4>
-    </div>
-    <div class="panel-body">
-      <form id="form" class="form-inline" v-on:submit.prevent="addSong">
-        <div class="form-group">
-          <label for="songArtist">Artist:</label>
-          <input type="text" id="songArtist" class="form-control" v-model="newSong.artist">
-        </div>
-        <div class="form-group">
-          <label for="songTitle">Title:</label>
-          <input type="text" id="songTitle" class="form-control" v-model="newSong.title">
-        </div>
-        <div class="form-group">
-          <label for="songName">Your Name:</label>
-          <input type="text" id="songName" class="form-control" v-model="newSong.name">
-        </div>
-        <input type="submit" class="btn btn-primary button" value="Add Song"></input>
-      </form>
-    </div>
-  <div class="panel-heading">
-    <h4>Songs Requested</h4>
-  </div>
-  <div class="panel-body">
-    <table class="table table-striped">
-      <thead name="newSong">
-        <tr>
-          <th>
-            Artist
-          </th>
-          <th>
-            Title
-          </th>
-          <th>
-            Name
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="song in songs">
-          <td>
-            {{song.artist}}
-          </td>
-          <td>
-            {{song.title}}
-          </td>
-          <td>
-            {{song.name}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-    <!-- <button @click="getGuestsFunc" type="button" name="button">Get List</button>
-    <div v-for="item in arr">
-      <h3>{{item.artist}}</h3>
-      <h3>{{item.title}}</h3>
-      <h3>{{item.name}}</h3>
-    </div> -->
+  <div id="app" class="wedding-container">
+    <form id="form" class="form-inline" v-on:submit.prevent="addSong">
+      <div class="form-group">
+        <input type="text" placeholder="Artist" id="songArtist" class="form-control" v-model="newSong.artist">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Title" id="songTitle" class="form-control" v-model="newSong.title">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" id="songName" class="form-control" v-model="newSong.name">
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary button" value="Request Song"></input>
+      </div>
+    </form>
   </div>
 </template>
 
@@ -97,4 +52,22 @@ export default {
 </script>
 
 <style lang="css">
+.wedding-container hr{
+  width: 100%;
+  max-width:1400px;
+}
+.wedding-container {
+  width: 100%;
+  text-align:center;
+  position: relative;
+  display: inline-block;
+}
+.form-group {
+  padding: 5px;
+  margin: 5px;
+  display: inline-block !important;
+}
+.form-inline {
+  display: inline-block;
+}
 </style>
