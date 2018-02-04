@@ -8,6 +8,7 @@ import Party from '@/components/Party/PartySection'
 import Photos from '@/components/Photos/PhotoSection'
 import GuestList from '@/components/GuestList/GuestListSection'
 import SongRequest from '@/components/Song/SongRequest'
+import Dinner from '@/components/Dinner/DinnerSection'
 
 Vue.use(Router)
 
@@ -61,6 +62,11 @@ export default new Router({
       path: '/songRequest',
       name: 'SongRequest',
       component: SongRequest
+    },
+    {
+      path: '/dinner',
+      name: 'Dinner',
+      component: Dinner
     }
   ]
 })
