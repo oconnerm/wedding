@@ -23,41 +23,38 @@ export default {
 </script>
 
 <style>
-    html{
-        overflow-x:hidden;
-    }
-    body{
-        width:100%;
-    }
-    .main {
-      text-align: center;
-      font-size:16px;
-    }
+html{
+    overflow-x:hidden;
+}
+body{
+    width:100%;
+}
+.main {
+  text-align: center;
+  font-size:16px;
+}
 
-    .container{
-        max-width:100%;
-    }
+.container{
+    max-width:100%;
+}
 
-    div.body-container{
-        /*background-color:cyan;*/
-        /*border: 1px dotted red;*/
-        margin: 0 auto;
-        max-width:none;
-    }
+div.body-container{
+    /*background-color:cyan;*/
+    /*border: 1px dotted red;*/
+    margin: 0 auto;
+    max-width:none;
+}
 
-    .button{
-        background-color:#5f1e1a;
-        border-color:#5f1e1a;
-    }
+.button{
+    background-color:#5f1e1a;
+    border-color:#5f1e1a;
+}
 
-    .button:hover,
-    .button:focus,
-    .button:active{
-        background-color:#fdc666 !important;;
-        border-color:#fdc666 !important;
-        color:#5f1e1a;
-    }
-
-
-
+.button:hover,
+.button:focus,
+.button:active{
+    background-color:#fdc666 !important;;
+    border-color:#fdc666 !important;
+    color:#5f1e1a;
+}
 </style>
