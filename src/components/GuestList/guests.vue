@@ -1,16 +1,12 @@
 <template lang="html">
   <div id="app" class="container">
     <h1>Secret Page - The Guest List</h1>
-<<<<<<< HEAD
-    <b-btn @click="getGuestsFunc" class="btn button" type="button" name="button">Show List</b-btn>
-=======
     <div v-if="isVisible">
-      <b-btn @click="getGuestsFunc" class="btn" type="button" name="button">Show List</b-btn>
+      <b-button class="button" @click="getGuestsFunc" type="button" name="button">Show List</b-button>
     </div>
     <div v-if="isntVisible">
       <h3 style="text-align: center">Total Attending: {{total_attending}}</h3>
     </div>
->>>>>>> b1b97f2ef806c27df6b0be21f5dbf7b9934f13b4
     <br>
     <div id="col">
       <p>Name</p>
@@ -131,8 +127,8 @@ export default {
   align-items: center;
 }
 button{
-  font-family: 'Oregano', cursive;
   border-radius: 5px;
+  color: #ffff;
 }
 p {
   text-align: left;

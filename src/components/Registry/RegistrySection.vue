@@ -3,7 +3,7 @@
     <h1>Registry</h1>
     <hr>
     <h2>VEBO</h2>
-    <p>VEBO is an experience-based wedding registry. Skip the traditional gifts and instead register for memorable experiences</p>
+    <p>VEBO is an experience-based wedding registry. Skip the traditional gifts and instead give Becca and Ryan a memorable experience.</p>
     <b-button class="button" href="https://vebolife.com/registries/RabeccaandRyan/" variant="primary" target="_blank">VEBO Wedding Registry</b-button>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 div.wedding-container hr{
   width: 100%;
   max-width:1100px;
@@ -30,5 +30,9 @@ div.wedding-container {
   padding: 1rem 0.5rem 2.5rem 0.5rem;
   text-align:center;
   position: relative;
+}
+div.wedding-container p{
+  margin-left: 15vw;
+  margin-right: 15vw;
 }
 </style>

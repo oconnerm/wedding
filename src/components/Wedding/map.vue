@@ -41,13 +41,13 @@ export default {
 
    @media screen and (min-width: 31.25em){
         .g-map{
-            height: 350px;   
+            height: 350px;
         }
    }
 
     @media screen and (min-width:50em){
         .g-map{
-            width: 83%;   
+            width: 83%;
         }
     }
 </style>

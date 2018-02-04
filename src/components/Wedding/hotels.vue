@@ -81,130 +81,130 @@ export default {}
 </script>
 
 <style lang="css" scoped>
-  .additonal-container{
-    text-align: center;
-  }
-    div.hotels-container h1{
-        text-align:center;
-        margin:0 auto 1rem;
-        font-family: 'Oregano', cursive;
-        color: #5f1e1a;
-        font-weight: 600;
+.additonal-container{
+text-align: center;
+}
+div.hotels-container h1{
+    text-align:center;
+    margin:0 auto 1rem;
+    font-family: 'Oregano', cursive;
+    color: #5f1e1a;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 50em){
+    .card-container{
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        justify-content: space-between;
+
+        -webkit-flex-flow: row;
+        -ms-flex-flow: row;
+        flex-flow: row;
+
+        padding:0 2%;
+
+
     }
+}
+h4.card-title{
+  text-align: center;
+}
+.disclaim{
+  font-size: 16px;
+}
+.card-wrap{
+    /*width:83%;*/
+    width: 100%;
+    border:none;
 
-    @media screen and (min-width: 50em){
-        .card-container{
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
+    margin:0 auto 1rem;
 
-            justify-content: space-between;
+    -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
+    transition:all 0.25s ease-out;
+}
 
-            -webkit-flex-flow: row;
-            -ms-flex-flow: row;
-            flex-flow: row;
-
-            padding:0 2%;
-
-
-        }
-    }
-    h4.card-title{
-      text-align: center;
-    }
-    .disclaim{
-      font-size: 16px;
-    }
+@media screen and (min-width:26.875em){
     .card-wrap{
-        /*width:83%;*/
-        width: 100%;
-        border:none;
-
-        margin:0 auto 1rem;
-
-        -webkit-transition: all 0.25s ease-out; /* Safari 3.1 to 6.0 */
-        transition:all 0.25s ease-out;
+       margin:0 auto 2rem;
     }
+}
 
-    @media screen and (min-width:26.875em){
-        .card-wrap{
-           margin:0 auto 2rem;
-        }
-    }
-
-    @media screen and (min-width: 31.25em){
-        .card-wrap{
-            width:83%;
-            margin:0 auto 8.5vw;
-
-            -moz-box-shadow: -1px 5px 8px #eee;
-            -webkit-box-shadow: -1px 5px 8px #eee;
-            box-shadow: -1px 5px 8px #eee;
-
-        }
-    }
-
-     @media screen and (min-width: 50em){
-        .card-wrap{
-            width: 32%;
-            position:relative;
-        }
-     }
-
-    @media screen and (min-width:68.75em ){
-        .card-wrap{
-            margin:0 auto 2rem;
-        }
-    }
-
-    .btn-primary{
-      display: flex;
-      justify-content: center;
-    }
-
-    .card-wrap .hotel-website{
-        /* text-align:center;
-        margin-bottom:1rem; */
-    }
-
-    @media screen and (min-width:50em){
-        /* .card-wrap .hotel-website{
-            position:absolute;
-            bottom:0.75rem;
-            left: calc(50% - (92.4531px / 2 ) );
-        } */
-    }
-
-
-    .card{
-        width:100%;
-        border:none;
-        position:static;
-    }
-
-
-    .card-text{
+@media screen and (min-width: 31.25em){
+    .card-wrap{
         width:83%;
-        margin:0 auto;
-        padding:1rem 0;
-        font-size: 15px;
+        margin:0 auto 8.5vw;
+
+        -moz-box-shadow: -1px 5px 8px #eee;
+        -webkit-box-shadow: -1px 5px 8px #eee;
+        box-shadow: -1px 5px 8px #eee;
+
     }
+}
 
-    @media screen and (min-width: 31.25em){
-        .card-text{
-            padding:2rem 0;
-        }
+ @media screen and (min-width: 50em){
+    .card-wrap{
+        width: 32%;
+        position:relative;
     }
+ }
 
-    @media screen and (min-width: 50em){
-        .card-text{
-            padding:2rem 0 5rem 0 ;
-        }
+@media screen and (min-width:68.75em ){
+    .card-wrap{
+        margin:0 auto 2rem;
     }
+}
+
+.btn-primary{
+  display: flex;
+  justify-content: center;
+}
+
+.card-wrap .hotel-website{
+    /* text-align:center;
+    margin-bottom:1rem; */
+}
+
+@media screen and (min-width:50em){
+    /* .card-wrap .hotel-website{
+        position:absolute;
+        bottom:0.75rem;
+        left: calc(50% - (92.4531px / 2 ) );
+    } */
+}
 
 
+.card{
+    width:100%;
+    border:none;
+    position:static;
+}
 
-    .card-text p{
-        margin:0;
+
+.card-text{
+    width:83%;
+    margin:0 auto;
+    padding:1rem 0;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 31.25em){
+    .card-text{
+        padding:2rem 0;
     }
+}
+
+@media screen and (min-width: 50em){
+    .card-text{
+        padding:2rem 0 5rem 0 ;
+    }
+}
+
+
+
+.card-text p{
+    margin:0;
+}
 </style>

@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   div.location-details{
         padding:1.5rem;
   }

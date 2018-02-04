@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="app" class="wedding-container">
-    <p>On your invitation there will be a 4 digit code. Type your code with the link below to find your invitation. Invitations will be sent a few months before the wedding </p>
+    <p>On your invitation there will be a 4 digit code. Type your code with the link below to find your invitation. Invitations will be sent a few months before the wedding. Any issues contact Ryan. </p>
     <b-btn v-b-modal.modal1 class="button" @click="clearArray">Find your Invitation</b-btn>
     <b-modal size="lg" :hideFooter='true' ref="my_modal" id="modal1" title="RSVP" @next="sendRsvp">
       <div class="form" v-if="!query">
@@ -345,8 +345,8 @@ div.wedding-container hr{
   max-width:1100px;
 }
 div.wedding-container p{
-  margin-left: 220px;
-  margin-right: 220px;
+  margin-left: 15vw;
+  margin-right: 15vw;
 }
 div.wedding-container {
   width: 100%;
