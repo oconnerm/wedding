@@ -50,8 +50,8 @@
            <p>948 West Dillon Road, Louisville, CO 80027 US</p>
            <p>Reservation: 844-232-0912</p>
           </span>
-          <b-link href="http://www.marriott.com/hotels/travel/denls-courtyard-boulder-louisville/">Book Here</b-link>
-          </b-card>    
+          <b-link href="http://www.marriott.com/hotels/travel/denls-courtyard-boulder-louisville/" target="_blank">Book Here</b-link>
+          </b-card>
        </div>
        <div class="BestWestern">
          <b-card title="Best Wersern Plus">
@@ -59,7 +59,7 @@
            <p>960 West Dillion Road, Louisville, CO 80027</p>
            <p>Reservations: 303-327-1215</p>
           </span>
-          <b-link href="https://www.bestwestern.com/en_US/book/hotels-in-louisville/best-western-plus-louisville-inn-suites/propertyCode.06179.html">Book Here</b-link>
+          <b-link href="https://www.bestwestern.com/en_US/book/hotels-in-louisville/best-western-plus-louisville-inn-suites/propertyCode.06179.html" target="_blank">Book Here</b-link>
           </b-card>
        </div>
          <div class="LaQuinta">
@@ -69,7 +69,7 @@
              <p>Reservations: 303-664-0100</p>
             </span>
             <b-link href="http://www.laquintadenverboulderlewisville.com/"
-              class="card-link">Book Here</b-link>
+              class="card-link" target="_blank">Book Here</b-link>
             </b-card>
          </div>
      </div>

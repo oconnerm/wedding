@@ -3,16 +3,16 @@
     <h1>Things To Do</h1>
 
     <b-list-group>
-      <b-list-group-item href="#">Blackhawk</b-list-group-item>
-      <b-list-group-item href="#">Colorado Mills Mall</b-list-group-item>
-      <b-list-group-item href="#">Downtown Denver</b-list-group-item>
-      <b-list-group-item href="#">Downtown Golden</b-list-group-item>
-      <b-list-group-item href="#">Estes Park</b-list-group-item>
-      <b-list-group-item href="#">Rocky Mountain National Park</b-list-group-item>
-      <b-list-group-item href="#">Coors Brewery</b-list-group-item>
-      <b-list-group-item href="#">Red Recks Amphitheater - Hiking</b-list-group-item>
-      <b-list-group-item href="#">Evergreen</b-list-group-item>
-      <b-list-group-item href="#">Rockies Game - Playing the Dodgers 8/9 - 8/12</b-list-group-item>
+      <b-list-group-item href="http://www.blackhawkcolorado.com/" target="_blank">Blackhawk</b-list-group-item>
+      <b-list-group-item href="http://www.simon.com/mall/colorado-mills" target="_blank">Colorado Mills Mall</b-list-group-item>
+      <b-list-group-item href="https://www.millercoors.com/av?url=https://www.millercoors.com/breweries/coors-brewing-company/tours" target="_blank">Coors Brewery</b-list-group-item>
+      <b-list-group-item href="https://www.denver.org/about-denver/neighborhood-guides/downtown/" target="_blank">Downtown Denver</b-list-group-item>
+      <b-list-group-item href="https://www.visitgolden.com/places-to-go/historic-downtown-golden/" target="_blank">Downtown Golden</b-list-group-item>
+      <b-list-group-item href="https://estes-park.com/" target="_blank">Estes Park</b-list-group-item>
+      <b-list-group-item href="https://www.colorado.com/cities-and-towns/evergreen" target="_blank">Evergreen</b-list-group-item>
+      <b-list-group-item href="http://redrocksonline.com/" target="_blank">Red Recks Amphitheater - Hiking</b-list-group-item>
+      <b-list-group-item href="https://www.mlb.com/rockies" target="_blank">Rockies Game - Playing the Dodgers 8/9 - 8/12</b-list-group-item>
+      <b-list-group-item href="https://www.nps.gov/romo/index.htm" target="_blank">Rocky Mountain National Park</b-list-group-item>
     </b-list-group>
   </div>
 </template>
