@@ -1,14 +1,14 @@
 <template lang="html">
   <div class="dinner-container">
     <div class="form-container">
-      <b-form-input v-model="newDinner.name" type="text" placeholder="Enter your Last Name"></b-form-input>
+      <b-form-input v-model="newDinner.name" type="text" placeholder="Enter Your Last Name"></b-form-input>
       <b-card header="How many adults in your party?" class="text-center">
         <b-form-select v-model="newDinner.adultsGoing" :options="options" class="mb-3" />
-        <h4>{{ adultsGoing }} {{ adultWord }}</h4>
+        <h4 v-if="!newDinner.adultsGoing == 0">{{ newDinner.adultsGoing }} {{ adultWord }}</h4>
        </b-card>
       <b-card header="How many kids in your party?" class="text-center">
         <b-form-select v-model="newDinner.childrenGoing" :options="options" class="mb-3" />
-        <h4>{{ childrenGoing }} {{childrenWord}}</h4>
+        <h4 v-if="!newDinner.childrenGoing == 0">{{ newDinner.childrenGoing }} {{childrenWord}}</h4>
       </b-card>
       <form id="form" class="form-group" v-on:submit.prevent="dinnerRSVP">
         <input type="submit" class="btn btn-primary button" value="Send Dinner RSVP"></input>
@@ -43,21 +43,24 @@ export default {
       ]
     }
   },
+  created () {
+    window.scrollTo(0, 0)
+  },
   computed: {
     adultWord () {
       let word
-      if (this.adultsGoing === 1) {
+      if (this.newDinner.adultsGoing === 1) {
         word = 'Adult'
-      } else if (this.adultsGoing > 1) {
+      } else if (this.newDinner.adultsGoing > 1) {
         word = 'Adults'
       }
       return word
     },
     childrenWord () {
       let word
-      if (this.childrenGoing === 1) {
+      if (this.newDinner.childrenGoing === 1) {
         word = 'Child'
-      } else if (this.childrenGoing > 1) {
+      } else if (this.newDinner.childrenGoing > 1) {
         word = 'Children'
       }
       return word
@@ -93,6 +96,6 @@ export default {
 .form-group {
   padding: 5px;
   margin: 5px;
-  display: inline-block !important;
+  /* display: inline-block !important; */
 }
 </style>
