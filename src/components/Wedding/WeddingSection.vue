@@ -48,7 +48,7 @@ export default {
 
     div.wedding-container h1{
         font-family: 'Oregano', cursive;
-        margin:0;
+        margin:30px;
         color: #5f1e1a;
         font-weight: 600;
     }

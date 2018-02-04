@@ -28,7 +28,7 @@
            <div class="card-text">
             <h4 class="card-title">Courtyard by Marriott Denver </h4>
              <p>303-271-0776</p>
-             <p>14700 6th Ave</p>
+             <p>14700 W 6th Ave Frontage Rd</p>
              <p>Golden, CO 80401</p>
            </div>
            <div class="hotel-website">
@@ -40,19 +40,39 @@
      <p>Rick and Diane will be staying at the Residence Inn August 9th, 10th and 11th.</p>
      <p>Steve and Pita will be staying at... pending.</p>
      <h1>Additional Hotels</h1>
-     <p>Here are some great hotels ff you'd like to stay in Loiusville or Arvada after the wedding.</p>
-     <h3>Louisville</h3>
-     <h4>(These are within a mile of the O'Connell house)</h4>
-     <h4>Courtyard by Marriot - Louisville/Boulder</h4>
-     <p>948 West Dillon Road, Louisville, CO 80027 US</p>
-     <p>Reservation Counter Call Center: 844-232-0912</p>
-     <h4>Best Western Plus Louisville Inn & Suites</h4>
-     <p>960 West Dillion Road, Louisville, CO 80027</p>
-     <p>Reservations: 303-327-1215</p>
-     <h4>La Quinta Inn & Suites Denver Boulder - Louisville</h4>
-     <p>902 West Dillion Road, Louisville, CO 80027</p>
-     <p>Reservations: 303-664-0100</p>
-     <p>Arvada</p>
+     <p>Here are some great hotels if you'd like to stay in Loiusville or Arvada after the wedding.</p>
+     <div class="additonal-container">
+       <h3>Louisville</h3>
+       <p>(These are within a mile of the O'Connell house)</p>
+       <div class="Courtyard-Lousiville">
+         <b-card title="Courtyard by Marriott">
+         <span class="card-text">
+           <p>948 West Dillon Road, Louisville, CO 80027 US</p>
+           <p>Reservation: 844-232-0912</p>
+          </span>
+          <b-link href="http://www.marriott.com/hotels/travel/denls-courtyard-boulder-louisville/" target="_blank">Book Here</b-link>
+          </b-card>
+       </div>
+       <div class="BestWestern">
+         <b-card title="Best Wersern Plus">
+         <span class="card-text">
+           <p>960 West Dillion Road, Louisville, CO 80027</p>
+           <p>Reservations: 303-327-1215</p>
+          </span>
+          <b-link href="https://www.bestwestern.com/en_US/book/hotels-in-louisville/best-western-plus-louisville-inn-suites/propertyCode.06179.html" target="_blank">Book Here</b-link>
+          </b-card>
+       </div>
+         <div class="LaQuinta">
+           <b-card title="La Quinta Inn">
+           <span class="card-text">
+             <p>902 West Dillion Road, Louisville, CO 80027</p>
+             <p>Reservations: 303-664-0100</p>
+            </span>
+            <b-link href="http://www.laquintadenverboulderlewisville.com/"
+              class="card-link" target="_blank">Book Here</b-link>
+            </b-card>
+         </div>
+     </div>
   </div>
 </template>
 
@@ -61,6 +81,9 @@ export default {}
 </script>
 
 <style lang="css" scoped>
+  .additonal-container{
+    text-align: center;
+  }
     div.hotels-container h1{
         text-align:center;
         margin:0 auto 1rem;
@@ -86,7 +109,12 @@ export default {}
 
         }
     }
-
+    h4.card-title{
+      text-align: center;
+    }
+    .disclaim{
+      font-size: 16px;
+    }
     .card-wrap{
         /*width:83%;*/
         width: 100%;
@@ -129,19 +157,22 @@ export default {}
         }
     }
 
-
+    .btn-primary{
+      display: flex;
+      justify-content: center;
+    }
 
     .card-wrap .hotel-website{
-        text-align:center;
-        margin-bottom:1rem;
+        /* text-align:center;
+        margin-bottom:1rem; */
     }
 
     @media screen and (min-width:50em){
-        .card-wrap .hotel-website{
+        /* .card-wrap .hotel-website{
             position:absolute;
             bottom:0.75rem;
             left: calc(50% - (92.4531px / 2 ) );
-        }
+        } */
     }
 
 
@@ -156,6 +187,7 @@ export default {}
         width:83%;
         margin:0 auto;
         padding:1rem 0;
+        font-size: 15px;
     }
 
     @media screen and (min-width: 31.25em){
