@@ -354,6 +354,10 @@ div.wedding-container {
   text-align:center;
   position: relative;
 }
+div.wedding-container p{
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
 #sbumit-button{
   background-color: #5f1e1a;
   color: #fff;
