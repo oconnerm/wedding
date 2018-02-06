@@ -54,7 +54,7 @@
           </b-card>
        </div>
        <div class="BestWestern">
-         <b-card title="Best Wersern Plus">
+         <b-card title="Best Werstern Plus">
          <span class="card-text">
            <p>960 West Dillion Road, Louisville, CO 80027</p>
            <p>Reservations: 303-327-1215</p>
