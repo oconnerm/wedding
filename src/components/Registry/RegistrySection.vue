@@ -2,10 +2,18 @@
   <div class="wedding-container">
     <h1>Registry</h1>
     <hr>
+    <h2>Crate and Barrel</h2>
+    <p>Becca and Ryan are registered at Crate and Barrel.</p>
+    <b-button class="button" href="https://www.crateandbarrel.com/gift-registry/rabecca-aragon-and-ryan-oconnell/r5813809" variant="primary" target="_blank">Crate and Barrel Registry</b-button>
+    <br></br>
+    <h2>Honeyfund</h2>
+    <p>Honeyfund is a honeymoon registry. A simple way for help Becca and Ryan enjoy their honeymoon to Ireland!</p>
+    <b-button class="button" href="https://www.honeyfund.com/wedding/becca-ryan" variant="primary" target="_blank">Honeyfund Registry</b-button>
+    <br></br>
     <h2>VEBO</h2>
     <p>VEBO is an experience-based wedding registry. Skip the traditional gifts and instead give Becca and Ryan a memorable experience.</p>
     <b-button class="button" href="https://vebolife.com/registries/RabeccaandRyan/" variant="primary" target="_blank">VEBO Wedding Registry</b-button>
-  </div>
+</div>
 </template>
 
 <script>
