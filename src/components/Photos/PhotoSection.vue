@@ -4,6 +4,9 @@
     <hr>
     <p>Click on the links below to view albums of Becca and Ryan.</p>
     <b-button class="button" href="https://imgur.com/a/8suNA" variant="primary" target="_blank">The Proposal Album</b-button>
+    <br>
+    <br>
+    <b-button class="button" href="https://imgur.com/a/eIrFhSy" variant="primary" target="_blank">The Engagement Album</b-button>
   </div>
 </template>
 
