@@ -1,43 +1,11 @@
 <template lang="html">
   <div id="app" class="container">
     <h1>Secret Page - The Guest List</h1>
-    <div v-if="isVisible">
-      <b-button class="button" @click="getGuestsFunc" type="button" name="button">Show List</b-button>
-    </div>
-    <div v-if="isntVisible">
-      <h3 style="text-align: center">Total Attending: {{total_attending}}</h3>
-    </div>
+      <h3 style="text-align: center">Total Attending: {{totalCount}}</h3>
     <br>
-    <div id="col">
-      <p>Name</p>
-      <p>Attending?</p>
-    </div>
-    <hr>
-    <div v-for="item in arr">
-      <div id="col">
-        <p>{{item.one_name}}</p>
-        <p>{{item.one_attending}}</p>
-      </div>
-      <div id="col">
-        <p>{{item.two_name}}</p>
-        <p>{{item.two_attending}}</p>
-      </div>
-      <div id="col">
-        <p>{{item.three_name}}</p>
-        <p>{{item.three_attending}}</p>
-      </div>
-      <div id="col">
-        <p>{{item.four_name}}</p>
-        <p>{{item.four_attending}}</p>
-      </div>
-      <div id="col">
-        <p>{{item.five_name}}</p>
-        <p>{{item.five_attending}}</p>
-      </div>
-      <div id="col">
-        <p>{{item.plus_one_name}}</p>
-      </div>
-    </div>
+    <template>
+      <b-table striped :items="items" :fields="fields"></b-table>
+    </template>
   </div>
 </template>
 
@@ -52,62 +20,94 @@ export default {
       isVisible: true,
       isntVisible: false,
       plusOneVisible: false,
-      total_attending: 0
+      total_attending: 0,
+      fields: {
+        name: {
+          label: 'Name',
+          sortable: true
+        },
+        attending: {
+          label: 'Attending',
+          sortable: true
+        },
+        party: {
+          label: 'Party',
+          sortable: true
+        }
+      },
+      items: []
     }
   },
-
-  methods: {
-    showListToggle () {
-      if (this.isVisible) {
-        this.isVisible = false
-        this.isntVisible = true
+  beforeMount: function () {
+    console.log('beforeMount')
+    function trueFalseMap (val) {
+      let answer
+      if (val === true) {
+        answer = 'Yes'
+      } else if (val === false) {
+        answer = 'No'
       } else {
-        this.isVisible = true
-        this.isntVisible = false
+        answer = 'No Response'
       }
-    },
-    increment () {
-      this.total_attending++
-    },
-    getGuestsFunc () {
-      var self = this
-      var codeQuery = Firebase.database().ref('guest_code')
-      codeQuery.once('value').then(function (snapshot) {
-        snapshot.forEach(function (ChildSnapshot) {
-          self.arr.push(ChildSnapshot.val())
-          if (ChildSnapshot.val().two_name !== undefined) {
-            self.arr.push(ChildSnapshot.val().two_name)
-          }
-          if (ChildSnapshot.val().three_name !== undefined) {
-            self.arr.push(ChildSnapshot.val().three_name)
-          }
-          if (ChildSnapshot.val().four_name !== undefined) {
-            self.arr.push(ChildSnapshot.val().four_name)
-          }
-          if (ChildSnapshot.val().five_name !== undefined) {
-            self.arr.push(ChildSnapshot.val().five_name)
-          }
-          if (ChildSnapshot.val().one_attending === true) {
-            self.increment()
-          }
-          if (ChildSnapshot.val().two_attending === true) {
-            self.increment()
-          }
-          if (ChildSnapshot.val().three_attending === true) {
-            self.increment()
-          }
-          if (ChildSnapshot.val().four_attending === true) {
-            self.increment()
-          }
-          if (ChildSnapshot.val().five_attending === true) {
-            self.increment()
-          }
-          if (ChildSnapshot.val().plus_one_name !== undefined) {
-            self.increment()
-          }
+      return answer
+    }
+    function partyMap (val) {
+      let lastName = val.split(' ')[1]
+      let First = val.split(' ')[0].split('')[0]
+      return `${First}. ${lastName}`
+    }
+    var self = this
+    var codeQuery = Firebase.database().ref('guest_code')
+    codeQuery.once('value').then(function (snapshot) {
+      snapshot.forEach(function (ChildSnapshot) {
+        self.items.push({
+          party: partyMap(ChildSnapshot.val().one_name),
+          name: ChildSnapshot.val().one_name,
+          attending: trueFalseMap(ChildSnapshot.val().one_attending)
         })
-        self.showListToggle()
+        if (ChildSnapshot.val().two_name !== undefined) {
+          self.items.push({
+            party: partyMap(ChildSnapshot.val().one_name),
+            name: ChildSnapshot.val().two_name,
+            attending: trueFalseMap(ChildSnapshot.val().two_attending)
+          })
+        }
+        if (ChildSnapshot.val().three_name !== undefined) {
+          self.items.push({
+            party: partyMap(ChildSnapshot.val().one_name),
+            name: ChildSnapshot.val().three_name,
+            attending: trueFalseMap(ChildSnapshot.val().three_attending)
+          })
+        }
+        if (ChildSnapshot.val().four_name !== undefined) {
+          self.items.push({
+            party: partyMap(ChildSnapshot.val().one_name),
+            name: ChildSnapshot.val().four_name,
+            attending: trueFalseMap(ChildSnapshot.val().four_attending)
+          })
+        }
+        if (ChildSnapshot.val().five_name !== undefined) {
+          self.items.push({
+            party: partyMap(ChildSnapshot.val().one_name),
+            name: ChildSnapshot.val().five_name,
+            attending: trueFalseMap(ChildSnapshot.val().five_attending)
+          })
+        }
       })
+    })
+  },
+  computed: {
+    totalCount () {
+      let result = 0
+      console.log('mounted')
+      let guestArr = this.items
+      for (let i = 0; i < guestArr.length; i++) {
+        if (guestArr[i].attending === 'Yes') {
+          console.log('count', guestArr[i])
+          result++
+        }
+      }
+      return result
     }
   },
 
@@ -121,23 +121,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.btn{
-  margin: auto;
-  display: flex;
-  align-items: center;
-}
-button{
-  border-radius: 5px;
-  color: #ffff;
-}
-p {
-  text-align: left;
-}
-#col {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-  padding-left:0;
-padding-right:0;
-}
 </style>
