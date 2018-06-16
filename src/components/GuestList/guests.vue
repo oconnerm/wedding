@@ -39,7 +39,6 @@ export default {
     }
   },
   beforeMount: function () {
-    console.log('beforeMount')
     function trueFalseMap (val) {
       let answer
       if (val === true) {
@@ -93,17 +92,22 @@ export default {
             attending: trueFalseMap(ChildSnapshot.val().five_attending)
           })
         }
+        if (ChildSnapshot.val().plus_one_name !== undefined) {
+          self.items.push({
+            party: partyMap(ChildSnapshot.val().one_name),
+            name: ChildSnapshot.val().plus_one_name,
+            attending: 'Yes'
+          })
+        }
       })
     })
   },
   computed: {
     totalCount () {
       let result = 0
-      console.log('mounted')
       let guestArr = this.items
       for (let i = 0; i < guestArr.length; i++) {
         if (guestArr[i].attending === 'Yes') {
-          console.log('count', guestArr[i])
           result++
         }
       }
