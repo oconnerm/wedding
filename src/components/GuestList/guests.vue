@@ -137,5 +137,7 @@ p {
   -moz-column-count: 2;
   -webkit-column-count: 2;
   column-count: 2;
+  padding-left:0;
+padding-right:0;
 }
 </style>

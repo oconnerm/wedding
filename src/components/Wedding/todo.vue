@@ -1,7 +1,9 @@
 <template lang="html">
   <div class="location-details">
+    <h1>Song Request</h1>
+    <a>Click <a href="javascript:void(0)" @click='songLink'> HERE </a> to request a song at the wedding!</a>
+    <br>
     <h1>Things To Do</h1>
-
     <b-list-group>
       <b-list-group-item href="http://www.blackhawkcolorado.com/" target="_blank">Blackhawk</b-list-group-item>
       <b-list-group-item href="http://www.simon.com/mall/colorado-mills" target="_blank">Colorado Mills Mall</b-list-group-item>

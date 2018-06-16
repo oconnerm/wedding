@@ -4,7 +4,10 @@
     <p>You will find the information for your Marriot online group rate reservation at the link below. If you need to reserve a two bedroom two bath room or if you require different dates please contact Katie Borrego (303-215-9218).</p>
     <p><i>In addition...</i><p>
     <p>There will be a shuttle from the Marriot Courtyard and Ressidence Inn to the wedding at the Pines at Genesee.</p>
-    <p>Out of <i>state</i> guests are invited to the rehersal dinner. If you plan to attend the rehersal dinner please RSVP <a href="javascript:void(0)" @click='dinnerLink'> here</a>!<p>
+    <h1>Rehersal Dinner</h1>
+    <p>Out of <i>state</i> guests are invited to the rehersal dinner. If you plan to attend the rehersal dinner please RSVP!</p>
+    <a href="javascript:void(0)" @click='dinnerLink'> Rehersal RSVP</a>
+    <br>
     <br>
     <div class="card-container">
        <div class="card-wrap">
@@ -38,7 +41,7 @@
        </div><!--.card-wrap-->
      </div><!--.card-container-->
      <p>Rick and Diane will be staying at the Residence Inn August 9th and 10th.</p>
-     <p>Steve and Pita will be staying at... pending.</p>
+     <p>Steve and Pita will be staying at the Residence Inn as well.</p>
      <h1>Additional Hotels</h1>
      <p>Here are some great hotels if you'd like to stay in Loiusville after the wedding.</p>
      <div class="additonal-container">
