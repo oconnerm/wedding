@@ -239,7 +239,8 @@ export default {
       this.$refs.my_modal.hide()
     },
     sendRsvp () {
-      var codeQuery = Firebase.database().ref('guest_code').child(this.guestInput)
+      let guestInput = this.guestInput.toLowerCase()
+      var codeQuery = Firebase.database().ref('guest_code').child(guestInput)
       codeQuery.update({
         'one_attending': this.one_attending
       })
