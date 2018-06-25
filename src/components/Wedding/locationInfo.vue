@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="wedding-container">
     <p>The wedding will be held on Friday, August 10, 2018 at the Pines at Genesee in Golden, Colorado. We'll start at the Evergreen Wedding Terrace for the outdoor ceremony. A reception will follow in the ballroom including dinner, dancing and <i>free</i> beer.</p>
-    <p><b>Ceremoney: 6:30pm - 7:00pm</b></p>
+    <p><b>Ceremony: 6:30pm - 7:00pm</b></p>
     <p><b>Reception: 7:00pm - 12:00am</b></p>
   </div>
 </template>
