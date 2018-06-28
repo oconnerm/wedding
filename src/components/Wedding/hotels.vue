@@ -4,9 +4,9 @@
     <p>You will find the information for your Marriot online group rate reservation at the link below. If you need to reserve a two bedroom two bath room or if you require different dates please contact Katie Borrego (303-215-9218).</p>
     <p><i>In addition...</i><p>
     <p>There will be a shuttle from the Marriot Courtyard and Ressidence Inn to the wedding at the Pines at Genesee.</p>
-    <h1>Rehersal Dinner</h1>
-    <p>Out of <i>state</i> guests are invited to the rehersal dinner. If you plan to attend the rehersal dinner please RSVP!</p>
-    <a href="javascript:void(0)" @click='dinnerLink'> Rehersal RSVP</a>
+    <h1>Rehearsal Dinner</h1>
+    <p>Out of <i>state</i> guests are invited to the rehearsal dinner. If you plan to attend the rehearsal dinner please RSVP!</p>
+    <a href="javascript:void(0)" @click='dinnerLink'> Rehearsal RSVP</a>
     <br>
     <br>
     <div class="card-container">

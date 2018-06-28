@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="wedding-container">
-    <h1>Rehersal Dinner RSVP</h1>
+    <h1>Rehearsal Dinner RSVP</h1>
     <hr>
     <dinner></dinner>
   </div>
