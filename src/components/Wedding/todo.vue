@@ -21,7 +21,11 @@
 
 <script>
 export default {
-  // data
+  methods: {
+    songLink () {
+      this.$router.push({ path: 'SongRequest' })
+    }
+  }
 }
 </script>
 
